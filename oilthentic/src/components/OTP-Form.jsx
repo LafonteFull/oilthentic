@@ -3,8 +3,8 @@ import React from "react";
 const OTPForm = () => {
 
   return (
-    <div className='w-1/3 justify-center mt-20'>
-      <div className="my-10 mx-auto bg-gray-50 p-5 rounded-md shadow-sm border-solid border border-gray-200">
+    <div className='md:w-1/3 lg:w-1/3 w-full justify-center mt-20'>
+      <div className="my-10 mx-auto p-5 rounded-md shadow-sm border-solid border border-gray-200">
         <form className="flex justify-center flex-row">
           <div className="divide-y divide-gray-200">
             <div className="py-8 text-base text-gray-700">
@@ -49,10 +49,10 @@ const OTPForm = () => {
                     // onChange={onChange}
                   />
               </div>
-              <div className="pt-4 flex items-center space-x-4 mt-10">
+              <div className="pt-4 flex items-center space-x-4">
                 <button
                   type="submit"
-                  className="inline bg-gray-50 flex justify-center items-center w-full text-black px-4 py-3"
+                  className="inline flex justify-center items-center w-full text-gray-800 px-4 py-3 hover:text-gray-600"
                 >
                   Request New OTP
                 </button>
