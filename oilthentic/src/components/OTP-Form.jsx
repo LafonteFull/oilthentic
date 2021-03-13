@@ -60,7 +60,7 @@ const OTPForm = () => {
               <div className="pt-4 flex items-center space-x-4 mt-10">
                 <button
                   type="submit"
-                  className="bg-white flex justify-center items-center w-full text-black px-4 py-3 rounded-md border-solid border border-gray-400"
+                  className="bg-white flex justify-center items-center w-full text-black px-4 py-3 rounded-md border-solid border border-gray-400 hover:bg-gray-400"
                 >
                   Continue
                 </button>

@@ -7,7 +7,7 @@ const Navbar = () => {
   const { pathname } = useLocation()
 
   useEffect(() => {
-    if (localStorage.access_token || pathname === '/sign-up' || pathname === '/sign-up/know-leader' || pathname === '/thank-you') setLoggedIn(true)
+    if (localStorage.access_token || pathname === '/sign-up' || pathname === '/sign-up/know-leader' || pathname === '/thank-you' || pathname === '/otp') setLoggedIn(true)
     else setLoggedIn(false)
   }, [pathname])
 
