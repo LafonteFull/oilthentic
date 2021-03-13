@@ -3,6 +3,7 @@ import imageplaceholder from '../assets/graphics.png'
 import facebook from '../assets/facebook.png'
 import twitter from '../assets/twitter.png'
 import instagram from '../assets/instagram-black.png'
+import { Link } from 'react-router-dom'
 
 const HowItWorks = () => {
   return (
@@ -22,7 +23,11 @@ const HowItWorks = () => {
       <div className="md:p-10 lg:p-20 p-5 w-full md:w-1/2 lg:w-1/2 mb-10">
         <h2 className="text-5xl font-bold">How it works</h2>
         <p className="mt-10 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores itaque temporibus animi, dolorum maiores vero nisi necessitatibus, veritatis facilis eius laudantium voluptas at eligendi laborum fuga dolores saepe quis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, est? Laborum unde dignissimos facere, voluptatum repellendus beatae nobis modi. Nemo itaque possimus, quo dignissimos in ipsa impedit. Cumque, exercitationem blanditiis. Lorem</p>
-        <button className="mt-10 font-bold text-lg bg-gray-900 text-white hover:bg-gray-800 py-3 px-10 rounded-lg shadow">Become a Member</button>
+        <div className="mt-10">
+          <Link 
+          className="font-bold text-lg bg-gray-900 text-white hover:bg-gray-800 py-3 px-10 rounded-lg shadow"
+          to="/sign-up">Become a Member</Link>
+        </div>
       </div>
     </div>
   )
