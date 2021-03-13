@@ -16,8 +16,8 @@ function App() {
       <Switch>
         <Route path="/sign-up" component={SignUp} />
         <Route path='/thank-you' component={Thankyou} />
+        <Route path="/otp" component={OTP} />
         <Route exact path="/" component={Home} />
-        <Route patb="/otp" component={OTP} />
         <Route path="*" component={Page404} />
       </Switch>
     </Router>
