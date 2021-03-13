@@ -16,7 +16,7 @@ const Navbar = () => {
       style={{width: '150px'}}
       className="ml-10"/>
       { !loggedIn && <button
-        className="bg-purple-800 text-white px-5 py-2 rounded mr-10 hover:bg-purple-700">Sign Up</button>
+        className="bg-gray-800 text-white px-5 py-2 rounded-lg mr-10 hover:bg-gray-700">Sign Up</button>
       }
     </nav>
   )
