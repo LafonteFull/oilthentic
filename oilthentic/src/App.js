@@ -8,6 +8,7 @@ import { Home } from './views'
 import { Navbar } from './components'
 
 import './App.css';
+import { SignUp } from "./pages/SignUp";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     <Navbar />
       <Switch>
         <Route path="/" component={Home} />
+        <SignUp />
       </Switch>
     </Router>
   );
