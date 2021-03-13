@@ -4,19 +4,18 @@ import {
   Route
 } from 'react-router-dom'
 
-import { Home } from './views'
+import { Home, SignUp } from './views'
 import { Navbar } from './components'
 
 import './App.css';
-import { SignUp } from "./pages/SignUp";
 
 function App() {
   return (
     <Router>
     <Navbar />
       <Switch>
-        <Route path="/" component={Home} />
-        <SignUp />
+        <Route exact path="/" component={Home} />
+        <Route path="/sign-up" component={SignUp} />
       </Switch>
     </Router>
   );
