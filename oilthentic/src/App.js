@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 
-import { Home, SignUp } from './views'
+import { Home, SignUp, Thankyou, Page404 } from './views'
 import { Navbar } from './components'
 
 import './App.css';
@@ -14,8 +14,10 @@ function App() {
     <Router>
     <Navbar />
       <Switch>
-        <Route exact path="/" component={Home} />
         <Route path="/sign-up" component={SignUp} />
+        <Route path='/thank-you' component={Thankyou} />
+        <Route exact path="/" component={Home} />
+        <Route path="*" component={Page404} />
       </Switch>
     </Router>
   );
