@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 
-import { Home, SignUp } from './views'
+import { Home, OTP, SignUp } from './views'
 import { Navbar } from './components'
 
 import './App.css';
@@ -16,6 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/sign-up" component={SignUp} />
+        <Route patb="/otp" component={OTP} />
       </Switch>
     </Router>
   );
