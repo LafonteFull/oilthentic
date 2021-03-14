@@ -13,37 +13,37 @@ const OTPForm = () => {
               </div>
               <div className="grid grid-cols-6 gap-2 h-14 mt-10">
                   <input
-                    name="Name"
+                    name="otp"
                     type="text"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     // onChange={onChange}
                   />
                   <input
-                    name="email"
+                    name="otp"
                     type="text"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     // onChange={onChange}
                   />
                   <input
-                    name="phone_number"
+                    name="otp"
                     type="text"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     // onChange={onChange}
                   />
                   <input
-                    name="phone_number"
+                    name="otp"
                     type="text"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     // onChange={onChange}
                   />
                   <input
-                    name="phone_number"
+                    name="otp"
                     type="text"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     // onChange={onChange}
                   />
                   <input
-                    name="phone_number"
+                    name="otp"
                     type="text"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     // onChange={onChange}

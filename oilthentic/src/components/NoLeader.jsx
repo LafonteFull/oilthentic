@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 
 const NoLeader = () => {
-  const [userInput, setUserInput] = useState({
-    name: '',
-    email: '',
-    location: ''
-  })
+  const [userInput, setUserInput] = useState()
 
   const onChange = (e) => {
     let { name, value } = e.target;
@@ -15,13 +11,15 @@ const NoLeader = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-
+    console.log(userInput);
   }
 
   return (
     <div className='md:w-1/3 lg:w-1/3 w-full justify-center'>
       <div className="my-10 mx-auto p-5 rounded-md shadow-sm border-solid border border-gray-200">
-        <form className="flex justify-center flex-row">
+        <form
+        onSubmit={onSubmit}
+        className="flex justify-center flex-row">
           <div className="divide-y divide-gray-200 w-full px-5">
             <div className="py-8 text-base text-gray-700 ">
               <div className="flex-1 flex-col mb-2">
