@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 const NoLeader = () => {
+  const [userInput, setUserInput] = useState({
+    name: '',
+    email: '',
+    location: ''
+  })
+
+  const onChange = (e) => {
+    let { name, value } = e.target;
+    const newInput = { ...userInput, [name]: value };
+    setUserInput(newInput);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+
+  }
 
   return (
     <div className='md:w-1/3 lg:w-1/3 w-full justify-center'>
@@ -11,14 +27,14 @@ const NoLeader = () => {
               <div className="flex-1 flex-col mb-2">
                 <label className="leading-loose">Name</label>
                 <input
-                  name="Name"
+                  name="name"
                   type="text"
                   className="block w-full py-3 px-1 mt-2 
                   text-gray-800 appearance-none 
                   border-b-2 border-gray-100
                   focus:text-gray-500 focus:outline-none focus:border-gray-200"
                   placeholder="e.g  John Doe"
-                  // onChange={onChange}
+                  onChange={onChange}
                 />
               </div>
               <div className="flex-1 flex-col mb-2">
@@ -31,7 +47,7 @@ const NoLeader = () => {
                   border-b-2 border-gray-100
                   focus:text-gray-500 focus:outline-none focus:border-gray-200"
                   placeholder="e.g  johndoe@mail.com"
-                  // onChange={onChange}
+                  onChange={onChange}
                 />
               </div>
               <div className="flex-1 flex-col mb-2">
@@ -44,7 +60,7 @@ const NoLeader = () => {
                   border-b-2 border-gray-100
                   focus:text-gray-500 focus:outline-none focus:border-gray-200"
                   placeholder="e.g +6281x-xxxx-xxxx"
-                  // onChange={onChange}
+                  onChange={onChange}
                 />
               </div>
               <div className="pt-4 flex items-center space-x-4">
