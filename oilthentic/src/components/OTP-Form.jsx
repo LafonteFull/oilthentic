@@ -47,36 +47,42 @@ const OTPForm = () => {
                   <input
                     name="first"
                     type="text"
+                    maxlength="1"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     onChange={onChange}
                   />
                   <input
                     name="second"
                     type="text"
+                    maxlength="1"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     onChange={onChange}
                   />
                   <input
                     name="third"
                     type="text"
+                    maxlength="1"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     onChange={onChange}
                   />
                   <input
                     name="fourth"
                     type="text"
+                    maxlength="1"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     onChange={onChange}
                   />
                   <input
                     name="fifth"
                     type="text"
+                    maxlength="1"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     onChange={onChange}
                   />
                   <input
                     name="sixth"
                     type="text"
+                    maxlength="1"
                     className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     onChange={onChange}
                   />
