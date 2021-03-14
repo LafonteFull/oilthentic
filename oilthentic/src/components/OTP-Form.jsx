@@ -1,17 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router";
 
 const OTPForm = () => {
+  const [OTP, setOTP] = useState({
+
+  })
   const history = useHistory()
 
-  const handleSubmit = () => {
-    history.push('/thank-you') // sementara
+  // const handleSubmit = () => {
+  //   history.push('/thank-you') // sementara
+  // }
+
+  const onChange = (e) => {
+    let { name, value } = e.target;
+    const newInput = { ...OTP, [name]: value };
+    setOTP(newInput);
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+    console.log(OTP);
+    let temp = ''
+    for (const key in OTP) {
+      temp+= OTP[key]
+    }
+    console.log(temp);
+    if (temp.length === 6)history.push('/thank-you')
   }
 
   return (
     <div className='md:w-1/3 lg:w-1/3 w-full justify-center mt-20'>
       <div className="my-10 mx-auto p-5 rounded-md shadow-sm border-solid border border-gray-200">
-        <form className="flex justify-center flex-row">
+        <form
+        onSubmit={onSubmit}
+        className="flex justify-center flex-row">
           <div className="divide-y divide-gray-200">
             <div className="py-8 text-base text-gray-900">
               <div className="">
@@ -20,40 +42,40 @@ const OTPForm = () => {
               </div>
               <div className="grid grid-cols-6 gap-2 h-14 mt-10">
                   <input
-                    name="otp"
+                    name="first"
                     type="text"
-                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                    // onChange={onChange}
+                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                    onChange={onChange}
                   />
                   <input
-                    name="otp"
+                    name="second"
                     type="text"
-                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                    // onChange={onChange}
+                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                    onChange={onChange}
                   />
                   <input
-                    name="otp"
+                    name="third"
                     type="text"
-                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                    // onChange={onChange}
+                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                    onChange={onChange}
                   />
                   <input
-                    name="otp"
+                    name="fourth"
                     type="text"
-                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                    // onChange={onChange}
+                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                    onChange={onChange}
                   />
                   <input
-                    name="otp"
+                    name="fifth"
                     type="text"
-                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                    // onChange={onChange}
+                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                    onChange={onChange}
                   />
                   <input
-                    name="otp"
+                    name="sixth"
                     type="text"
-                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
-                    // onChange={onChange}
+                    className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+                    onChange={onChange}
                   />
               </div>
               <div className="pt-4 flex items-center space-x-4">
@@ -68,7 +90,6 @@ const OTPForm = () => {
                   <button
                     type="submit"
                     className="bg-white flex justify-center items-center w-full text-black px-4 py-3 rounded-md border-solid border border-gray-400 hover:bg-gray-400"
-                    onClick={handleSubmit}
                   >
                     Continue
                   </button>
