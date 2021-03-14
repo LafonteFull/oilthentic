@@ -13,9 +13,10 @@ const OTPForm = () => {
       <div className="my-10 mx-auto p-5 rounded-md shadow-sm border-solid border border-gray-200">
         <form className="flex justify-center flex-row">
           <div className="divide-y divide-gray-200">
-            <div className="py-8 text-base text-gray-700">
+            <div className="py-8 text-base text-gray-900">
               <div className="">
-                <h2 className="text-xl text-center md:text-4xl lg:text-4xl font-bold">OTP Code</h2>
+                <h2 className="text-xl text-center md:text-4xl lg:text-4xl font-bold">OTP Verification</h2>
+                <h2 className="text-sm italic text-center m-2 text-gray-700">Please enter the code that's just sent to your phone.</h2>
               </div>
               <div className="grid grid-cols-6 gap-2 h-14 mt-10">
                   <input
@@ -58,7 +59,7 @@ const OTPForm = () => {
               <div className="pt-4 flex items-center space-x-4">
                 <button
                   type="submit"
-                  className="inline flex justify-center items-center w-full text-gray-800 px-4 py-3 hover:text-gray-600"
+                  className="inline flex justify-center items-center w-full text-gray-500 px-4 py-3 hover:text-gray-700"
                 >
                   Request New OTP
                 </button>
