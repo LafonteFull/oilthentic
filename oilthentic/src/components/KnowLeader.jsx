@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { useHistory } from 'react-router-dom';
 
 const KnowLeader = () => {
+  const history = useHistory()
   const [userInput, setUserInput] = useState()
-  
 
   const onChange = (e) => {
     let { name, value } = e.target;
@@ -13,17 +14,18 @@ const KnowLeader = () => {
   const onSubmit = (e) => {
     e.preventDefault()
     console.log(userInput);
+    history.push('/sign-up/otp')
   }
 
   return (
     <div className='md:w-1/3 lg:w-1/3 w-full justify-center'>
       <div className="my-10 mx-auto p-5 rounded-md shadow-sm border-solid border border-gray-200">
-        <form
+      <form
         onSubmit={onSubmit}
-        className="flex justify-center flex-row ">
+        className="flex justify-center flex-row">
           <div className="divide-y divide-gray-200 w-full px-5">
-            <div className="py-8 text-base text-gray-700">
-              <div className="flex-1 flex-col">
+            <div className="py-8 text-base text-gray-700 ">
+              <div className="flex-1 flex-col mb-2">
                 <label className="leading-loose">Name</label>
                 <input
                   name="name"
@@ -36,7 +38,7 @@ const KnowLeader = () => {
                   onChange={onChange}
                 />
               </div>
-              <div className="flex-1 flex-col my-3">
+              <div className="flex-1 flex-col mb-2">
                 <label className="leading-loose">Email</label>
                 <input
                   name="email"
@@ -49,7 +51,7 @@ const KnowLeader = () => {
                   onChange={onChange}
                 />
               </div>
-              <div className="flex-1 flex-col ">
+              <div className="flex-1 flex-col mb-2">
                 <label className="leading-loose">Phone Number</label>
                 <input
                   name="phone_number"
@@ -62,7 +64,7 @@ const KnowLeader = () => {
                   onChange={onChange}
                 />
               </div>
-              <div className="flex-1 flex-col mt-3">
+              <div className="flex-1 flex-col mb-2">
                 <label className="leading-loose">Location</label>
                 <select
                 name='location'

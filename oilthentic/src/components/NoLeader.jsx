@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useHistory } from 'react-router-dom';
 
 const NoLeader = () => {
+  const history = useHistory()
   const [userInput, setUserInput] = useState()
 
   const onChange = (e) => {
@@ -12,6 +14,7 @@ const NoLeader = () => {
   const onSubmit = (e) => {
     e.preventDefault()
     console.log(userInput);
+    history.push('/sign-up/otp')
   }
 
   return (
