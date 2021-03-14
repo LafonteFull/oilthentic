@@ -1,6 +1,6 @@
 const initialState = {
-  user = {},
-  otp = false
+  user: {},
+  otp: false
 }
 
 const authReducer = ( state = initialState, action ) => {
@@ -8,7 +8,7 @@ const authReducer = ( state = initialState, action ) => {
     case 'CHANGE_USER':
       return {
         ...state,
-        user = action.payload
+        user: action.payload
       }
     default: 
       return state

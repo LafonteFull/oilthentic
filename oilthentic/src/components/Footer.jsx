@@ -9,9 +9,9 @@ const Footer = () => {
           style={{width: '190px'}}
           className="ml-5"/>
         <div className="flex md:flex-row lg:flex-row flex-col text-white mr-10">
-          <div className="m-3 hover:text-gray-600 cursor-pointer">Contact Us</div>
-          <div className="m-3 hover:text-gray-600 cursor-pointer">Events</div>
-          <div className="m-3 hover:text-gray-600 cursor-pointer">Careers</div>
+          <a target='_blank' rel="noreferrer" href='https://www.youngliving.com/en_US/company/contactus' className="m-3 hover:text-gray-600 cursor-pointer">Contact Us</a>
+          <a target='_blank' rel="noreferrer" href='https://www.youngliving.com/en_US/company/events' className="m-3 hover:text-gray-600 cursor-pointer">Events</a>
+          <a target='_blank' rel="noreferrer" href='https://www.youngliving.com/en_US/company/careers' className="m-3 hover:text-gray-600 cursor-pointer">Careers</a>
         </div>
       </div>
     </footer>

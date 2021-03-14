@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { signUp } from '../store/actions/authAction';
+
 
 const NoLeader = () => {
   const history = useHistory()
+  const dispatch = useDispatch()
   const [userInput, setUserInput] = useState()
 
   const onChange = (e) => {
@@ -13,8 +17,8 @@ const NoLeader = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    console.log(userInput);
     history.push('/sign-up/otp')
+    dispatch(signUp({...userInput, location: null}))
   }
 
   return (
