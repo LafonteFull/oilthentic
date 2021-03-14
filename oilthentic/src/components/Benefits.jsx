@@ -2,8 +2,8 @@ import React from 'react'
 
 const Benefits = () => {
   return (
-    <div className="text-gray-900 bg-gray-300 flex flex-col w-full h-full justify-center items-center p-10">
-      <h2 className="text-5xl font-extrabold mb-10 mt-10">Benefits</h2>
+    <div className="text-gray-900 bg-gray-200 flex flex-col w-full h-full justify-center items-center p-10">
+      <h2 className="text-5xl font-bold mb-10 mt-10">Benefits</h2>
       {/* BENEFIT LIST */}
       <div className="flex flex-wrap justify-around px-10 m-10">
 

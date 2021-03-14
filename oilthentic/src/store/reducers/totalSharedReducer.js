@@ -1,8 +1,8 @@
 const initialState = {
-  totalShareFB = 0,
-  totalShareTwitter = 0,
-  totalShareInstagram = 0,
-  totalShareAll = 0
+  totalShareFB: 0,
+  totalShareTwitter: 0,
+  totalShareInstagram: 0,
+  totalShareAll: 0
 }
 
 const totalSharedReducer = ( state = initialState, action ) => {

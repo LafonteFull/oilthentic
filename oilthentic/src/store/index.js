@@ -1,4 +1,4 @@
-import { createStore, applyMiddlewares, combineReducers } from 'redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import authReducer from './reducers/authReducer'
 import totalSharedReducer from './reducers/totalSharedReducer'
@@ -8,6 +8,6 @@ const rootReducer = combineReducers({
   user: authReducer
 })
 
-let store = createStore(rootReducer, applyMiddlewares(thunk))
+let store = createStore(rootReducer, applyMiddleware(thunk))
 
 export default store

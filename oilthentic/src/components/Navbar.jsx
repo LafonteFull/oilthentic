@@ -20,8 +20,8 @@ const Navbar = () => {
           className="ml-10"/>
       </Link>
       { !loggedIn && <Link
-        className="bg-gray-800 text-white px-5 py-2 rounded-lg mr-10 hover:bg-gray-700"
-        to="/sign-up">Sign Up</Link>
+        className="bg-gray-800 text-white px-5 py-1 rounded mr-10"
+        to="/sign-up">Join Now</Link>
       }
     </nav>
   )

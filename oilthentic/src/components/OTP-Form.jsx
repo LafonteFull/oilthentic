@@ -1,8 +1,11 @@
 import React from "react";
 import { useHistory } from "react-router";
+import { useSelector } from 'react-redux';
 
 const OTPForm = () => {
   const history = useHistory()
+  const { user } = useSelector((state) => state.user)
+  console.log(user, '<<< user info from redux')
 
   const handleSubmit = () => {
     history.push('/thank-you') // sementara
