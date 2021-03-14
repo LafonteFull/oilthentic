@@ -10,12 +10,12 @@ const Thankyou = () => {
     setShowModal(true)
   }
 
-  const [smallScreen, setSmallScreen] = useState(false)
+  const [smallScreen, setSmallScreen] = useState(true)
 
   useEffect(() => {
     const setLarge = () => {
-      if (window.innerWidth > 800) setSmallScreen(true)
-      else setSmallScreen(false)
+      if (window.innerWidth < 800) setSmallScreen(false)
+      else setSmallScreen(true)
     }
     window.addEventListener('resize', setLarge)
 
@@ -53,6 +53,9 @@ const Thankyou = () => {
                   </h3>
                 {/*body*/}
                 <div className="relative p-6 flex-auto flex flex-col md:flex-row lg:flex-row">
+                  <p className="my-4 text-gray-600 md:text-base lg:text-base text-sm leading-relaxed px-5 w-full md:w-4/6 lg:w-4/6">
+                  As Young Living is always looking to raise the standard, our “One” earned a Gold International Business Stevie Award for conventions, and we are excited about the chance to bring the globe together on a massive scale yet again for the 2021 VIGC! The global pandemic continues to challenge us while offering opportunities to expand, improve, and learn. Although restrictions are once again preventing us from gathering in person for our International Grand Convention this year, our vast-reaching global platform will allow us to connect to hundreds of thousands of our global Young Living family members for our second official VIGC taking place June 16–19, 2021.
+                  </p>
                   { smallScreen && <div 
                     className="w-full md:w-2/6 lg:w-2/6 p-5 flex justify-center">
                   <Lottie animationData={animation} 
@@ -60,9 +63,6 @@ const Thankyou = () => {
                     autoPlay 
                     style={{maxWidth: '300px'}}/>
                   </div> }
-                  <p className="my-4 text-gray-600 md:text-base lg:text-base text-sm leading-relaxed px-5 w-full md:w-4/6 lg:w-4/6">
-                  As Young Living is always looking to raise the standard, our “One” earned a Gold International Business Stevie Award for conventions, and we are excited about the chance to bring the globe together on a massive scale yet again for the 2021 VIGC! The global pandemic continues to challenge us while offering opportunities to expand, improve, and learn. Although restrictions are once again preventing us from gathering in person for our International Grand Convention this year, our vast-reaching global platform will allow us to connect to hundreds of thousands of our global Young Living family members for our second official VIGC taking place June 16–19, 2021.
-                  </p>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 rounded-b">

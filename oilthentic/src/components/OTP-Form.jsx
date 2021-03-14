@@ -14,8 +14,8 @@ const OTPForm = () => {
         <form className="flex justify-center flex-row">
           <div className="divide-y divide-gray-200">
             <div className="py-8 text-base text-gray-700">
-              <div className="mx-28 flex flex-col">
-                <h2 className="text-4xl font-bold">OTP Code</h2>
+              <div className="">
+                <h2 className="text-xl text-center md:text-4xl lg:text-4xl font-bold">OTP Code</h2>
               </div>
               <div className="grid grid-cols-6 gap-2 h-14 mt-10">
                   <input
