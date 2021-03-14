@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 const NoLeader = () => {
+  const [userInput, setUserInput] = useState({
+    name: '',
+    email: '',
+    location: ''
+  })
+
+  const onChange = (e) => {
+    let { name, value } = e.target;
+    const newInput = { ...userInput, [name]: value };
+    setUserInput(newInput);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+
+  }
 
   return (
     <div className='w-1/3 justify-center'>
@@ -11,11 +27,11 @@ const NoLeader = () => {
               <div className="flex-1 flex-col">
                 <label className="leading-loose">Name</label>
                 <input
-                  name="Name"
+                  name="name"
                   type="text"
                   className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                   placeholder="e.g  John Doe"
-                  // onChange={onChange}
+                  onChange={onChange}
                 />
               </div>
               <div className="flex-1 flex-col">
@@ -25,7 +41,7 @@ const NoLeader = () => {
                   type="text"
                   className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                   placeholder="e.g  johndoe@mail.com"
-                  // onChange={onChange}
+                  onChange={onChange}
                 />
               </div>
               <div className="flex-1 flex-col">
@@ -35,7 +51,7 @@ const NoLeader = () => {
                   type="text"
                   className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                   placeholder="e.g +6281x-xxxx-xxxx"
-                  // onChange={onChange}
+                  onChange={onChange}
                 />
               </div>
               <div className="pt-4 flex items-center space-x-4">
