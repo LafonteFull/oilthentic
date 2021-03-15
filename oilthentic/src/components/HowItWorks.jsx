@@ -1,5 +1,4 @@
 import React from 'react'
-// import imageplaceholder from '../assets/graphics.png'
 import facebook from '../assets/facebook.png'
 import twitter from '../assets/twitter.png'
 import instagram from '../assets/instagram-black.png'
