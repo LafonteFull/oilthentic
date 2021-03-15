@@ -20,7 +20,7 @@ const Navbar = () => {
           className="ml-10"/>
       </Link>
       { !loggedIn && <Link
-        className="bg-gray-800 text-white px-5 py-1 rounded mr-10"
+        className="bg-gray-800 text-white px-5 py-1 rounded mr-10 shadow-lg"
         to="/sign-up">Join Now</Link>
       }
     </nav>

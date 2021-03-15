@@ -30,7 +30,7 @@ const HowItWorks = () => {
           <p className="mt-10 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores itaque temporibus animi, dolorum maiores vero nisi necessitatibus, veritatis facilis eius laudantium voluptas at eligendi laborum fuga dolores saepe quis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, est? Laborum unde dignissimos facere, voluptatum repellendus beatae nobis modi. Nemo itaque possimus, quo dignissimos in ipsa impedit. Cumque, exercitationem blanditiis. Lorem</p>
           <div className="mt-10">
             <Link 
-            className="text-lg bg-black text-white py-3 px-10 rounded-lg shadow"
+            className="text-lg bg-black text-white py-3 px-10 rounded-lg shadow-lg"
             to="/sign-up">Become a Member</Link>
           </div>
         </div>
