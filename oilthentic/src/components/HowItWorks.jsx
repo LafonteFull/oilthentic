@@ -15,7 +15,7 @@ const HowItWorks = () => {
           <Milestones />
           <p className="text-lg">Current share: <span className="font-extrabold text-gray-900 text-2xl">200.000</span></p>
           <p className="font-bold text-lg">
-            Share to get more benefits!</p>
+            Share now to earn rewards!</p>
           <div className="flex justify-around mt-2 items-center">
           <svg className="w-6 h-6 mr-3" fill="gray" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z" /></svg>
             <img src={facebook} alt="facebook" className="mr-4 cursor-pointer" style={{width: '30px', height: '30px'}}/>
@@ -30,7 +30,7 @@ const HowItWorks = () => {
           <p className="mt-10 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam asperiores itaque temporibus animi, dolorum maiores vero nisi necessitatibus, veritatis facilis eius laudantium voluptas at eligendi laborum fuga dolores saepe quis! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, est? Laborum unde dignissimos facere, voluptatum repellendus beatae nobis modi. Nemo itaque possimus, quo dignissimos in ipsa impedit. Cumque, exercitationem blanditiis. Lorem</p>
           <div className="mt-10">
             <Link 
-            className="text-lg bg-black text-white py-3 px-10 rounded-lg shadow"
+            className="text-lg bg-black text-white py-3 px-10 rounded-lg shadow-lg"
             to="/sign-up">Become a Member</Link>
           </div>
         </div>

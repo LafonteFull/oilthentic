@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="absolute md:bottom-20 flex py-5 flex-col w-screen h-full items-center justify-end" style={{zIndex: '8'}}>
         <Fade top duration={1500}>
             <ScrollDown to="content1" className="cursor-pointer text-white flex flex-col justify-center items-center">
-              <button className="bg-black text-white md:text-lg px-10 py-2 rounded shadow-xl">
+              <button className="bg-black text-white md:text-lg px-10 py-2 rounded shadow-xl animate-bounce shadow-lg">
                 Learn More
               </button>
             </ScrollDown>
