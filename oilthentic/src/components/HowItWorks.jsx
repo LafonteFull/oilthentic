@@ -1,7 +1,7 @@
 import React from 'react'
-import facebook from '../assets/facebook.png'
-import twitter from '../assets/twitter.png'
-import instagram from '../assets/instagram-black.png'
+import facebook from '../assets/SocialMedia/FB.png'
+import twitter from '../assets/SocialMedia/TW.png'
+import instagram from '../assets/SocialMedia/IG.png'
 import { Link } from 'react-router-dom'
 import Fade from 'react-reveal/Fade';
 import Milestones from './Milestones'
@@ -12,7 +12,7 @@ const HowItWorks = () => {
       <Fade left duration={1500}>
         <div className="flex justify-center items-center flex-col py-20 md:w-1/2 w-full md:w-1/2 lg:w-1/2">
           <Milestones />
-          <p className="text-lg">Current share: <span className="font-extrabold text-gray-900 text-2xl">200.000</span></p>
+          <p className="text-lg">Current share: <span className="font-extrabold text-gray-900 text-2xl">289</span></p>
           <p className="font-bold text-lg">
             Share now to earn rewards!</p>
           <div className="flex justify-around mt-2 items-center">

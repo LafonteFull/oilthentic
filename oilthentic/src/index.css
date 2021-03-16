@@ -16,3 +16,16 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.purple-bg {
+  background-color: #B0265E;
+}
+.purple-text {
+  color: #B0265E;
+}
+.yellow-bg {
+  background-color: #EDD2A1;
+}
+.yellow-text {
+  color: #EDD2A1;
+}
