@@ -46,7 +46,7 @@ const Thankyou = () => {
           >
             <div className="relative w-auto my-6 mx-auto max-w-5xl p-5">
               {/*content*/}
-              <div className="border-0 rounded shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none pt-10">
+              <div className="border-0 rounded shadow-lg relative flex flex-col w-full bg-white opacity-95 outline-none focus:outline-none pt-10">
                 {/*header*/}
                   <h3 className="text-lg lg:text-2xl md:text-xl font-semibold text-center text-purple-800">
                     2021 Virtual International Grand Convention
