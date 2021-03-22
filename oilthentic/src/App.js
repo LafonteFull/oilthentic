@@ -7,7 +7,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 
 import { Home, SignUp, Thankyou, Page404, OTP } from './views'
-import { Navbar } from './components'
+import { Navbar, Footer } from './components'
 
 import './App.css';
 
@@ -23,6 +23,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="*" component={Page404} />
         </Switch>
+      <Footer />
       </Router>
     </Provider>
   );

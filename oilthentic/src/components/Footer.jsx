@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-8 flex justify-between">
         <img src={brandlogo} alt="Young Living"
           // style={{width: '190px'}}
-          className="ml-5"/>
+          className="h-16"/>
         <div className="flex md:flex-row lg:flex-row flex-col text-white mr-10">
           <a target='_blank' rel="noreferrer" href='https://www.youngliving.com/en_US/company/contactus' className="m-3 hover:text-gray-200 cursor-pointer">Contact Us</a>
           <a target='_blank' rel="noreferrer" href='https://www.youngliving.com/en_US/company/events' className="m-3 hover:text-gray-200 cursor-pointer">Events</a>
