@@ -23,7 +23,7 @@ const PreSignUp = (props) => {
 
 
   return (
-    <div className="w-screen relative merry-font text-white h-screen overflow-hidden broken-white-1 z-2 -top-20">
+    <div id="pre-signup" className="w-screen relative merry-font text-white h-screen overflow-hidden broken-white-1 z-2 -top-20">
       <div className="min-w-screen relative top-0 h-full bg-center flex"
         style={{ backgroundImage: `url(${bgMobile3})`, backgroundSize: 'cover' }} >
           <div className="px-10 flex flex-col mt-10 items-center w-screen ">

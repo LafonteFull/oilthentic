@@ -16,7 +16,7 @@ const Hero = (props) => {
           <h2 className="purple-text leading-tight font-semibold text-center"
           style={{fontSize: '.9rem'}}>Jadilah Bagian Dari Gerakan Ini <br/> Dan Dapatkan Promo Lebih Banyak!</h2>
           <h3 className="mt-5 text-black text-center text-sm font-semibold">123,000 Orang sudah menjadi bagian</h3>
-          <img src={buttonDaftar} alt="Daftar Sekarang" className="w-40 mt-2" />
+          <a href="#pre-signup"><img src={buttonDaftar} alt="Daftar Sekarang" className="w-40 mt-2" /></a>
         </div>
       </div>
     </div>
