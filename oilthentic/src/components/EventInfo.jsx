@@ -1,5 +1,4 @@
 import React from 'react'
-import imageplaceholder from '../assets/guest.jpeg'
 import Fade from 'react-reveal/Fade';
 
 const EventInfo = () => {
@@ -28,8 +27,8 @@ const EventInfo = () => {
                 </Fade>
                 <Fade right duration={1500}>
                     <div className="w-full md:w-1/3 lg:w-1/3 m-5">
-                        <img src={imageplaceholder} alt="Guest Star"
-                        style={{maxHeight: '500px'}}/>
+                        {/* <img src={imageplaceholder} alt="Guest Star" */}
+                        {/* style={{maxHeight: '500px'}}/> */}
                     </div>
                 </Fade>
             </div>

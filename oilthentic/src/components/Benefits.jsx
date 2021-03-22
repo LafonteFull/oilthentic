@@ -1,10 +1,10 @@
 import React from 'react'
-import imageplaceholder from '../assets/BenefitAll.png'
+// import imageplaceholder from '../assets/BenefitAll.png'
 
 const Benefits = () => {
   return (
     <div className=" flex flex-col w-full h-full justify-center items-center p-10">
-      <img src={imageplaceholder} alt="Benefit" />
+      {/* <img src={imageplaceholder} alt="Benefit" /> */}
       {/* <h2 className="text-5xl font-bold mb-10 mt-10">Benefits</h2> */}
       {/* BENEFIT LIST */}
       {/* <div className="flex flex-wrap justify-around px-10 m-10">
