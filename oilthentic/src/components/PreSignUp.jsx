@@ -26,7 +26,7 @@ const PreSignUp = (props) => {
     <div className="w-screen relative merry-font text-white h-screen overflow-hidden broken-white-1 z-2 -top-20">
       <div className="min-w-screen relative top-0 h-full bg-center flex"
         style={{ backgroundImage: `url(${bgMobile3})`, backgroundSize: 'cover' }} >
-          <div className="px-10 flex flex-col mt-20 items-center w-screen">
+          <div className="px-10 flex flex-col mt-10 items-center w-screen ">
             <h2 className="merry-font text-center text-xl font-semibold">Daftar Di Sini Untuk Ikut Oilthentic Day 2021</h2>
             <form
               onSubmit={onSubmit}
@@ -79,7 +79,7 @@ const PreSignUp = (props) => {
                     </div>
                     <div className="flex items-center justify-center">
                       <button type="submit">
-                        <img src={buttonKirim} alt="submit"/>
+                        <img src={buttonKirim} alt="submit" className="w-44"/>
                       </button>
                     </div>
                   </div>
