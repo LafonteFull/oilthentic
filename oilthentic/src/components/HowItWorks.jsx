@@ -1,10 +1,10 @@
 import React from 'react'
-import facebook from '../assets/SocialMedia/FB.png'
-import twitter from '../assets/SocialMedia/TW.png'
-import instagram from '../assets/SocialMedia/IG.png'
+// import facebook from '../assets/SocialMedia/FB.png'
+// import twitter from '../assets/SocialMedia/TW.png'
+// import instagram from '../assets/SocialMedia/IG.png'
 import { Link } from 'react-router-dom'
 import Fade from 'react-reveal/Fade';
-import Milestones from './Milestones'
+// import Milestones from './Milestones'
 
 const HowItWorks = () => {
   return (
