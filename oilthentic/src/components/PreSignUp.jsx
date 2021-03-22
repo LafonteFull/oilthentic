@@ -40,8 +40,8 @@ const PreSignUp = (props) => {
                         type="text"
                         required
                         className="block w-full py-3 px-1 mt-2 appearance-none 
-                        border-b-2 border-gray-100
-                        focus:text-gray-100 focus:outline-none focus:border-gray-200"
+                        border-b-2 border-gray-100 pl-2 text-gray-800
+                        focus:text-gray-800 focus:outline-none focus:border-gray-200"
                         onChange={onChange}
                       />
                     </div>
@@ -52,8 +52,8 @@ const PreSignUp = (props) => {
                         type="text"
                         required
                         className="block w-full py-3 px-1 mt-2 appearance-none 
-                        border-b-2 border-gray-100
-                        focus:text-gray-100 focus:outline-none focus:border-gray-200"
+                        border-b-2 border-gray-100 pl-2 text-gray-800
+                        focus:text-gray-800  focus:outline-none focus:border-gray-200"
                         onChange={onChange}
                       />
                     </div>
@@ -62,10 +62,10 @@ const PreSignUp = (props) => {
                       <p className="absolute text-gray-400 text-lg border-2 border-gray-400 p-1 rounded-lg top-11 left-1">+62</p>
                       <input
                         name="phone_number"
-                        type="number"
+                        type="text"
                         className="block w-full py-3 px-1 mt-2 appearance-none 
-                        border-b-2 border-gray-100
-                        focus:text-gray-100 focus:outline-none focus:border-gray-200"
+                        border-b-2 border-gray-100 pl-15 text-gray-800
+                        focus:text-gray-800 focus:outline-none focus:border-gray-200"
                         onChange={onChange}
                       />
                     </div>
@@ -77,9 +77,9 @@ const PreSignUp = (props) => {
                       />
                       <label className="leading-loose inline text-xs">I Agree to Young Living Indonesia's Terms of Service and Privacy Policy</label>
                     </div>
-                    <div className="flex items-center justify-center">
-                      <button type="submit">
-                        <img src={buttonKirim} alt="submit" className="w-44"/>
+                    <div className="w-full">
+                      <button type="submit" className="flex items-center justify-center">
+                        <img src={buttonKirim} alt="submit" className="w-3/4"/>
                       </button>
                     </div>
                   </div>
