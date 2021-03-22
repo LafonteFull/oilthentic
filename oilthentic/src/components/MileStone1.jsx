@@ -1,5 +1,5 @@
 import React from 'react'
-import { bgMobile4, buttonInformasi, product1, product2, product3 } from '../assets/index'
+import { bgMobile4 } from '../assets/index'
 
 const MileStone1 = () => {
   return (
