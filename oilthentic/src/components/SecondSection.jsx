@@ -3,8 +3,8 @@ import { bgMobile2, buttonInformasi, product1, product2, product3 } from '../ass
 
 const SecondSection = () => {
   return (
-    <div className="w-screen relative merry-font h-screen overflow-hidden broken-white-1 z-2">
-      <div className="min-w-screen relative top-0 h-screen bg-center bg-cover flex py-5"
+    <div className="w-screen merry-font h-screen overflow-hidden broken-white-1">
+      <div className="min-w-screen h-screen bg-center bg-cover flex py-5"
         style={{ backgroundImage: `url(${bgMobile2})`, backgroundSize: 'cover' }} >
           <div className="px-5 flex flex-col w-screen">
             <p className="poppins-font px-2 purple-text text-justify text-xs ">Dengan cara share acara ini di social media Anda, maka Anda sudah berkontribusi untuk mendapatkan promo lebih banyak pada saat Oilthentic Day 2021. Ajak teman Anda untuk ikut gerakan ini untuk mendapatkan semua promo yang tersedia!</p>

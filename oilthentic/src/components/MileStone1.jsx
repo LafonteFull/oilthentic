@@ -4,14 +4,15 @@ import { bgMobile4, shareFB, shareWA, shareTW,
 
 const MileStone1 = () => {
   return (
-    <div className="w-screen relative merry-font h-screen overflow-hidden broken-white-1 z-10">
-      <div className="min-w-screen relative top-0 h-full bg-center bg-cover flex"
+    <div className="w-screen merry-font h-screen overflow-hidden z-10"
+    style={{ backgroundColor: '#E8E3DD' }}>
+      <div className="min-w-screen top-0 h-full bg-center bg-cover flex justify-center"
         style={{ backgroundImage: `url(${bgMobile4})`, backgroundSize: 'cover' }} >
           <div className="px-5 flex flex-col items-center w-screen ">
             <h3 className="purple-text merry-font text-center text-xl font-bold px-10">Pencapaian Menuju Lebih Banyak Hadiah</h3>
             {/* MILESTONE NUMBER */}
-            <div className="milestone-box w-64 relative flex justify-center rounded-3xl bg-white mt-10 h-32">
-              <div className="text-3xl flex justify-center rounded-3xl purple-bg absolute -top-8 py-2 px-8 w-44 text-gray-100 font-bold merry-font share-count ">
+            <div className="milestone-box w-64 flex justify-center rounded-3xl bg-white mt-10 h-32">
+              <div className="text-3xl flex justify-center rounded-3xl purple-bg  -top-8 py-2 px-8 w-44 text-gray-100 font-bold merry-font share-count ">
                 <h1>123,000</h1>
               </div>
               <div className="purple-text text-sm py-10 flex flex-col items-center rounded-xl">
@@ -24,10 +25,10 @@ const MileStone1 = () => {
               </div>
             </div>
             {/* END OF MILESTONE NUMBER */}
-              <div className="absolute px-2 top-80 right-5">
-                <img src={bubble1} alt="100.000 shares" className="w-32 relative right-0"/>
+              <div className=" px-2 top-96 right-5">
+                <img src={bubble1} alt="100.000 shares" className="w-32 right-0"/>
               </div>
-              <div className="absolute bottom-0 left-0 px-2">
+              <div className=" bottom-0 left-0 px-2">
                 <img src={bubble2} alt="200.000 shares" className="w-32"/>
               </div>
         </div>
