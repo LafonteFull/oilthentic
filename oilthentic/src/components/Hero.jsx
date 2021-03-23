@@ -8,7 +8,8 @@ const Hero = (props) => {
   //   else setMobile(false)
   // }, [props])
   return (
-    <div className="w-screen antialiased relative merry-font h-screen overflow-hidden broken-white-1 -top-1">
+    <div className="w-screen antialiased relative merry-font h-screen overflow-hidden broken-white-1"
+    style={{ backgroundColor: '#E8E3DD' }}>
       <div className="min-w-screen absolute top-0 h-full bg-center bg-cover flex z-10"
         style={{ backgroundImage: props.isMobile ? `url(${bgMobile1})` : `url(${bgMobile1})`, backgroundSize: 'cover' }} >
         <div className="px-5 flex flex-col justify-center items-center content-center w-screen">
