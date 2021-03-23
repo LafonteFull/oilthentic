@@ -5,7 +5,7 @@ import { buttonBeliSekarang, igFooter, ytFooter, siteFooter } from '../assets/in
 const Footer = () => {
   return (
     <footer className="">
-      <div className="purple-g w-screen py-5 purple-bg flex flex-row justify-between px-3">
+      <div className="purple-g w-screen py-5 purple-bg flex flex-row justify-between px-10">
         <div className="flex flex-col mr-2">
           <h2 className="merry-font font-bold text-white">Beli PEP Young Living</h2>
           <p className="poppins-font text-xs text-white">Untuk Kamu yang Tidak Suka Menunggu</p>

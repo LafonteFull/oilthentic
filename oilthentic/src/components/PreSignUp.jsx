@@ -23,66 +23,66 @@ const PreSignUp = (props) => {
 
 
   return (
-    <div id="pre-signup" className="w-screen relative merry-font text-white h-screen overflow-hidden broken-white-1 z-2 -top-20">
-      <div className="min-w-screen relative top-0 h-full bg-center flex"
-        style={{ backgroundImage: `url(${bgMobile3})`, backgroundSize: 'cover' }} >
-          <div className="px-10 flex flex-col mt-10 items-center w-screen ">
-            <h2 className="merry-font text-center text-xl font-semibold">Daftar Di Sini Untuk Ikut Oilthentic Day 2021</h2>
+    <div id="pre-signup" className="relative merry-font min-w-screen text-white overflow-hidden presignup z-2"
+    >
+      <div className="w-screen top-0 h-full bg-center flex"
+        style={{ backgroundImage: `url(${bgMobile3})`, backgroundSize: 'cover', height: '28rem' }} >
+          <div className="px-10 flex flex-col mt-5">
+            <h2 className="merry-font text-lg text-center mt-2 font-semibold">Daftar Di Sini Untuk Ikut <br/> Oilthentic Day 2021</h2>
             <form
               onSubmit={onSubmit}
-              className="flex justify-center flex-row">
-                <div className="divide-y w-full px-5">
-                  <div className="py-8 text-base ">
-                    <div className="flex-1 flex-col mb-2">
-                      <label className="leading-loose">Name</label>
+              className="flex">
+                <div className="w-full px-5">
+                    <div className="flex-1 flex-col">
+                      <label className="text-xs">Full Name</label>
                       <input
                         name="name"
                         type="text"
                         required
-                        className="block w-full py-3 px-1 mt-2 appearance-none 
-                        border-b-2 border-gray-100 pl-2 text-gray-800
-                        focus:text-gray-800 focus:outline-none focus:border-gray-200"
+                        className="block text-sm w-full py-2 px-1 mt-1 appearance-none 
+                         pl-2 text-gray-800
+                        focus:text-gray-800 focus:outline-none "
                         onChange={onChange}
                       />
                     </div>
-                    <div className="flex-1 flex-col mb-2">
-                      <label className="leading-loose">Email</label>
+                    <div className="flex-1 flex-col">
+                      <label className="text-xs">Email</label>
                       <input
                         name="email"
                         type="text"
                         required
-                        className="block w-full py-3 px-1 mt-2 appearance-none 
-                        border-b-2 border-gray-100 pl-2 text-gray-800
-                        focus:text-gray-800  focus:outline-none focus:border-gray-200"
+                        className="block text-sm w-full py-2 px-1 mt-1 appearance-none 
+                         pl-2 text-gray-800
+                        focus:text-gray-800  focus:outline-none "
                         onChange={onChange}
                       />
                     </div>
-                    <div className="flex-1 flex-col mb-2 relative">
-                      <label className="leading-loose">Phone Number</label>
-                      <p className="absolute text-gray-400 text-lg border-2 border-gray-400 p-1 rounded-lg top-11 left-1">+62</p>
+                    <div className="flex-1 flex-col relative">
+                      <label className="text-xs">Phone Number</label>
+                      <p className="absolute text-gray-400 text-xs border-2 border-gray-400 p-1 rounded-lg top-8 left-1">+62</p>
                       <input
                         name="phone_number"
                         type="text"
-                        className="block w-full py-3 px-1 mt-2 appearance-none 
-                        border-b-2 border-gray-100 pl-15 text-gray-800
-                        focus:text-gray-800 focus:outline-none focus:border-gray-200"
+                        className="block text-sm w-full py-2 px-1 mt-1 appearance-none 
+                         pl-15 text-gray-800
+                        focus:text-gray-800 focus:outline-none "
                         onChange={onChange}
                       />
                     </div>
-                    <div className="flex-1 flex-col mb-2 relative">
+                    <div className="flex-1 flex-col relative">
                     <input
                         type="checkbox"
-                        className="w-5 h-5 rounded-lg mr-2 mt-2"
+                        className="w-3 h-3 rounded-lg mr-2 mt-2"
                         required
                       />
-                      <label className="leading-loose inline text-xs">I Agree to Young Living Indonesia's Terms of Service and Privacy Policy</label>
+                      <label className="inline"
+                      style={{ fontSize: '.4rem'}}>I Agree to Young Living Indonesia's Terms of Service and Privacy Policy</label>
                     </div>
-                    <div className="w-full">
-                      <button type="submit" className="flex items-center justify-center">
-                        <img src={buttonKirim} alt="submit" className="w-3/4"/>
+                    <div className="w-full flex items-center justify-center relative -top-2">
+                      <button type="submit" >
+                        <img src={buttonKirim} alt="submit" className="w-48"/>
                       </button>
                     </div>
-                  </div>
                 </div>
           </form>
         </div>

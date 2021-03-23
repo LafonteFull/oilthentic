@@ -61,3 +61,12 @@ body {
 /* .mobile-hero {
   width: 100vw;
 } */
+.share-count {
+  border: 5px solid rgb(173, 37, 92)
+}
+.presignup {
+  background-color: #E8E3DD;
+}
+.milestone-box {
+  border: 2px solid #B0265E;
+}
