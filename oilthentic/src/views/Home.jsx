@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Hero, SecondSection, PreSignUp, MileStone1, MileStone2, PEP, KeuntunganMember } from '../components'
+import { Hero, SecondSection, PreSignUp, MileStone1, MileStone2, PEP, KeuntunganMember, ThirdSectionnMember, ThirdSection } from '../components'
 
 const Home = () => {
   
@@ -21,7 +21,8 @@ const Home = () => {
   return (
     <div>
       <Hero isMobile={isMobile}/>
-      <SecondSection />
+      <SecondSection isMobile={isMobile}/>
+      { !isMobile && <ThirdSection /> }
       <PreSignUp isMobile={isMobile}/>
       <MileStone1 isMobile={isMobile}/>
       <MileStone2 isMobile={isMobile}/>
