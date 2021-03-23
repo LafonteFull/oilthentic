@@ -67,7 +67,7 @@ const PreSignUp = (props) => {
                           name="phone_number"
                           type="text"
                           className="inline-block text-sm w-full py-2 px-1 mt-1 appearance-none 
-                          pl-15 text-gray-800
+                          pl-2 text-gray-800
                           focus:text-gray-800 focus:outline-none "
                           onChange={onChange}
                         />
