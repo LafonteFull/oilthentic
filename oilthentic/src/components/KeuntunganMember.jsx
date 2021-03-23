@@ -3,7 +3,7 @@ import { bgMobile9, benefit1, benefit2, benefit3, benefit4, benefit5 } from '../
 
 const KeuntunganMember = () => {
   return (
-    <div id="KeuntunganMember-video" className="relative merry-font overflow-hidden"
+    <div id="KeuntunganMember-video" className="merry-font overflow-hidden"
     style={{backgroundColor: '#E8E3DD'}}>
       <div className="min-w-screen top-0 bg-center bg-cover flex pb-5"
         style={{ backgroundImage: `url(${bgMobile9})`, backgroundSize: 'cover' }} >

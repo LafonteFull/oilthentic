@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     const detectScreenWidth = () => {
-      if (window.innerWidth < 700) setMobile(true)
+      if (window.innerWidth < 1000) setMobile(true)
       else setMobile(false)
     }
 

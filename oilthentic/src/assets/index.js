@@ -13,7 +13,12 @@ export { default as bgMobile7 } from './Background/Background-8.png'
 export { default as bgMobile8 } from './Background/Background-9.png'
 export { default as bgMobile9 } from './Background/Background-10.png'
 
-export { default as bgWeb1 } from './Background/hederweb.png'
+export { default as bgWeb1 } from './Background/BG-02.png'
+export { default as bgWeb2 } from './Background/BG-03.png'
+export { default as bgWeb3 } from './Background/BG-04.png'
+export { default as bgWeb4 } from './Background/BG-05.png'
+export { default as bgWeb5 } from './Background/BG-10.png'
+export { default as bgWeb6 } from './Background/BG-12.png'
 
 export { default as mobileTitle } from './Title/homepage-title.png'
 

@@ -4,8 +4,9 @@ import { bgMobile4, shareFB, shareWA, shareTW,
 
 const MileStone1 = () => {
   return (
-    <div className="w-screen relative merry-font h-screen overflow-hidden broken-white-1 z-10">
-      <div className="min-w-screen relative top-0 h-full bg-center bg-cover flex"
+    <div className="w-screen relative merry-font h-screen overflow-hidden z-10"
+    style={{ backgroundColor: '#E8E3DD' }}>
+      <div className="min-w-screen relative top-0 h-full bg-center bg-cover flex justify-center"
         style={{ backgroundImage: `url(${bgMobile4})`, backgroundSize: 'cover' }} >
           <div className="px-5 flex flex-col items-center w-screen ">
             <h3 className="purple-text merry-font text-center text-xl font-bold px-10">Pencapaian Menuju Lebih Banyak Hadiah</h3>
@@ -24,7 +25,7 @@ const MileStone1 = () => {
               </div>
             </div>
             {/* END OF MILESTONE NUMBER */}
-              <div className="absolute px-2 top-80 right-5">
+              <div className="absolute px-2 top-96 right-5">
                 <img src={bubble1} alt="100.000 shares" className="w-32 relative right-0"/>
               </div>
               <div className="absolute bottom-0 left-0 px-2">
