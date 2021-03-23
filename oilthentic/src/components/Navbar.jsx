@@ -4,7 +4,7 @@ import brandlogo from '../assets/Logo.png'
 const Navbar = () => {
   return (
     <nav className="fixed w-screen purple-gradient flex justify-center shadow-lg p-4"
-    style={{}}>
+    style={{ zIndex: 9999 }}>
       <Link to="/">
         <img src={brandlogo} alt="Young Living Logo" 
           // style={{maxWidth: '200px'}}
