@@ -6,7 +6,7 @@ const Hero = (props) => {
 
   return (
     // <div className="merry-font h-full w-full bg-red-200 flex justify-center">
-      <div className="bgImage"
+      <div className="bgImage" id="herobanner"
         style={{ backgroundImage: props.isMobile ? `url(${bgMobile1})` : `url(${bgWeb1})`,
         backgroundColor: '#E8E3DD'}} >
         <div className="px-5 flex flex-col justify-center items-center h-full w-full">
