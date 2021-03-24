@@ -34,13 +34,13 @@ const SwitchCategory = () => {
     <>
     <div id="signup" className="min-w-screen merry-font h-screen overflow-hidden broken-white-1"
     style={{ backgroundColor: '#E8E3DD' }}>
-      <div className="h-full bg-center flex justify-center"
-        style={{ backgroundImage: `url(${bgWeb4})` , backgroundSize: 'cover', width: '100vw' }} >
+      <div className="h-full bg-center flex justify-center items-center bghalf"
+        style={{ backgroundImage: `url(${bgWeb4})` }} >
           <div className="px-10 flex text-white flex-col w-full items-center mt-15 md:mt-0">
             <div className="flex justify-center mt-20 bg-gray-200 rounded-xl z-10 p-1">
-                <Link className={backgroundClass1 + " rounded-lg font-bold w-40 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
+                <Link className={backgroundClass1 + " rounded-lg mr-1 font-bold md:w-40 w-32 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
                 to="/thank-you">No Leader</Link>
-                <Link className={backgroundClass2 + " rounded-lg font-bold w-40 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
+                <Link className={backgroundClass2 + " rounded-lg font-bold md:w-40 w-32 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
                 to="/thank-you/know-leader">Know Leader</Link>
             </div>
             <Switch>
