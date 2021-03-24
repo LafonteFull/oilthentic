@@ -13,7 +13,7 @@ const Home = () => {
       if (window.innerWidth < 1000) setMobile(true)
       else setMobile(false)
     }
-
+  
     window.addEventListener('resize', detectScreenWidth)
 
     return () => {
