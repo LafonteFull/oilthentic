@@ -4,12 +4,12 @@ import { bgMobile4, webMilestone2, shareFB, shareWA, shareTW,
 
 const MileStone1 = (props) => {
   return (
-    <div className="w-screen merry-font h-screen overflow-hidden"
-    style={{ backgroundColor: '#E8E3DD' }}>
-      <div className="min-w-screen h-full bg-center bg-cover flex justify-center"
-        style={{ backgroundImage: props.isMobile ? `url(${bgMobile4})` : `url(${webMilestone2})` , backgroundSize: 'cover' }} >
-          <div className="px-5 flex flex-col items-center w-screen md:w-1/2 relative">
-            <div className="flex flex-col lg:absolute milestone-placement justify-center items-center">
+    // <div className="w-screen merry-font h-screen overflow-hidden min-h-screen"
+    // style={{ backgroundColor: '#E8E3DD' }}>
+      <div className="bgImage"
+        style={{ backgroundImage: props.isMobile ? `url(${bgMobile4})` : `url(${webMilestone2})` }} >
+          <div className="px-5 flex flex-col items-center w-screen md:w-1/2 min-w-screen h-full ">
+            <div className="flex flex-col self-end milestone-placement justify-center items-center">
               <h3 className="purple-text merry-font text-center text-xl font-bold px-10">Pencapaian Menuju Lebih Banyak Hadiah</h3>
               {/* MILESTONE NUMBER */}
               <div className="milestone-box w-64 md:w-96 flex justify-center flex-col rounded-3xl bg-white mt-10 h-44 sm:h-32">
@@ -35,7 +35,7 @@ const MileStone1 = (props) => {
               </div>
         </div>
       </div>
-    </div>
+    // </div>
   )
 }
 

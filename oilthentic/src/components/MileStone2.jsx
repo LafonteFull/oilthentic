@@ -4,14 +4,14 @@ import { bgMobile5, webMilestone4,
 
 const MileStone2 = (props) => {
   return (
-    <div className="w-screen merry-font h-screen overflow-hidden"
+    <div className="w-screen merry-font h-screen overflow-hidden min-h-screen"
     style={{ backgroundColor: '#E8E3DD' }}>
       <div className="min-w-screen h-full bg-center bg-cover flex justify-center "
         style={{ backgroundImage: props.isMobile ? `url(${bgMobile5})` : `url(${webMilestone4})`, backgroundSize: 'cover' }} >
           <div className="px-5 flex flex-col justify-end py-20 md:items-start  w-screen">
             {/* Bubble */}
               <div className=" px-2 md:w-1/2 w-full flex relative -top-32 right-6">
-                <img src={bubble3BW} alt="300.000 shares" className="w-32 right-0 md:w-48 self-end absolute"/>
+                <img src={bubble3BW} alt="300.000 shares" className="w-32 right-0 md:w-48 self-end absolute z-10"/>
               </div>
               <div className=" bottom-0 px-2 md:w-1/2 w-full relative bottom-10">
                 <img src={bubble4BW} alt="400.000 shares"  className="w-44 md:w-64"/>
