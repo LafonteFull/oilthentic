@@ -1,10 +1,10 @@
 import React from 'react'
-import { bgWeb2, product2, product3 } from '../assets/index'
+import { bgWeb3, product2, product3 } from '../assets/index'
 
 const ThirdSection = (props) => {
   return (
     <div className="merry-font bghalf"
-    style={{ backgroundColor: '#E8E3DC', backgroundImage: `url(${bgWeb2})` }}>
+    style={{ backgroundColor: '#E8E3DC', backgroundImage: `url(${bgWeb3})` }}>
       <div className="px-5 flex flex-col justify-center items-center w-full md:py-20 py-10">
             <div className="flex flex-col items-center px-2 md:mt-5">
               <h3 className="purple-text merry-font text-center font-semibold md:text-4xl"
