@@ -8,7 +8,7 @@ const KeuntunganMember = (props) => {
       <div className="h-full flex">
         <div className=" flex text-white flex-col w-full items-center py-10 self-end md:self-center">
             <h3 className="purple-text merry-font text-center font-bold text-xl md:text-4xl mb-10">Keuntungan Menjadi Member <br /> Young Living Indonesia</h3>
-            <div className="flex flex-col justify-center md:flex-row md:flex-wrap md:w-3/4 md:mt-10 ">
+            <div className="flex flex-col justify-center items-center md:flex-row md:flex-wrap md:w-3/4 md:mt-10 ">
               <img src={benefit1} className="m-2 md:m-3 w-72 md:w-96" alt="Diskon 24% dari harga retail untuk semua produk yang Anda inginkan"/>
               <img src={benefit2} className="m-2 md:m-3 w-72 md:w-96" alt="Potongan ongkos kirim dengan program Essential Rewards"/>
               <img src={benefit3} className="m-2 md:m-3 w-72 md:w-96" alt="Hadian dan produk gratis melalui program Loyalti Essential Awards"/>
