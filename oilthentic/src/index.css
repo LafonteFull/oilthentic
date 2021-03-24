@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -18,10 +18,10 @@ body {
 }
 
 .purple-bg {
-  background-color: #B0265E;
+  background-color: #B03266;
 }
 .purple-text {
-  color: #B0265E;
+  color: #B03266;
 }
 .yellow-bg {
   background-color: #EDD2A1;
@@ -33,3 +33,40 @@ body {
 #root {
   overflow-x: hidden;
 }
+.purple-gradient {
+  background: rgb(2,0,36);
+  background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(182,53,106,1) 0%, rgba(120,26,64,1) 100%);
+}
+.purple-gradient2 {
+  background: rgb(2,0,36);
+  background: linear-gradient(60deg, rgba(2,0,36,1) 0%, rgba(120,26,64,1) 0%,rgba(182,53,106,1) 100%);
+}
+
+/* .hero {
+  background-image: url('assets.background.mobile.hero')
+} */
+.merry-font {
+  font-family: 'Merriweather', serif;
+}
+
+.broken-white-1 {
+  background-color: #F9F4ED;
+}
+.broken-white-2 {
+  background-color: #FEFAF6;
+}
+.poppins-font {
+  font-family: 'Poppins', sans-serif;
+}
+/* .mobile-hero {
+  width: 100vw;
+} */
+.share-count {
+  border: 5px solid rgb(173, 37, 92)
+}
+.milestone-box {
+  border: 2px solid #B0265E;
+}
+/* .landingtitle {
+  width: 20rem;
+} */

@@ -1,0 +1,28 @@
+import React from 'react'
+import { bgWeb3, buttonInformasi, product1, product2, product3 } from '../assets/index'
+
+const ThirdSection = (props) => {
+  return (
+    <div className="w-screen merry-font h-screen overflow-hidden broken-white-1 h-full"
+    style={{ backgroundColor: '#E8E3DC', minWidth: '100vw' }}>
+      <div className="min-w-screen h-screen bg-center bg-cover flex py-5 justify-center"
+        style={{ backgroundImage: `url(${bgWeb3})`, backgroundSize: 'cover', backgroundColor: '#E8E3DC' }} >
+          <div className="px-5 md:px-20 flex flex-col w-screen items-center">
+            <div className="flex flex-col items-center px-2 md:mt-5">
+              <h3 className="purple-text merry-font text-center font-semibold md:text-5xl"
+              style={{ lineHeight: '1.5' }}>Promo yang Bisa Kamu Dapatkan di <br/> Oilthentic Day 2021</h3>
+              <p className="poppins-font purple-text text-justify text-xs mt-3 md:text-3xl md:mt-20 md:px-20"> Hadiah didapatkan untuk setiap pembelian PEP Young Living Indonesia di tanggal 25 dan 26 April 2021 berdasarkan total jumlah share yang dihasilkan.</p>
+              <div className="flex flex-row justify-center items-center px-10 py-2">
+                <img src={product2} alt="Product 1" className="ml-10 mr-5 w-32"
+                  style={{ width: props.isMobile ? '' : '20rem' }} />
+                <img src={product3} alt="Product 2" className="m-3 w-40" 
+                style={{ width: props.isMobile ? '' : '30rem' }} />
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ThirdSection

@@ -1,6 +1,15 @@
 export { default as Navbar } from './Navbar'
 export { default as Footer } from './Footer'
 export { default as Hero } from './Hero'
+export { default as SecondSection } from './SecondSection'
+export { default as ThirdSection } from './ThirdSection'
+export { default as PreSignUp } from './PreSignUp'
+export { default as MileStone1 } from './MileStone1'
+export { default as MileStone2 } from './MileStone2'
+export { default as PEP } from './PEP'
+export { default as KeuntunganMember } from './KeuntunganMember'
+
+
 export { default as HowItWorks } from './HowItWorks'
 export { default as Benefits } from './Benefits'
 export { default as NoLeader } from './NoLeader'
