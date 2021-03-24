@@ -68,8 +68,8 @@ const NoLeader = () => {
                   {/*content*/}
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                     {/*body*/}
-                    <div className="relative p-5 flex-auto">
-                      <p className="my-4 text-blueGray-500 text-black ptext-lg leading-relaxed"> Are you sure? </p>
+                    <div className="relative px-5 flex-auto">
+                      <p className="my-4 text-blueGray-500 text-black text-lg leading-relaxed"> Are you sure? </p>
                     </div>
                     {/*footer*/}
                     <div className="flex items-center justify-end p-2 border-t border-solid border-blueGray-200 rounded-b">
