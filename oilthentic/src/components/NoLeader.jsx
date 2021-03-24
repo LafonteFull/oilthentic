@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { buttonKirim } from '../assets/index'
 import { signUp } from '../store/actions/authAction';
+import { OTPForm } from ".";
 
 
 const NoLeader = () => {
@@ -10,6 +11,7 @@ const NoLeader = () => {
   const dispatch = useDispatch()
   const [userInput, setUserInput] = useState()
   const [showModal, setShowModal] = useState(false)
+  const [showOTP, setShowOTP] = useState(false)
 
   const onChange = (e) => {
     let { name, value } = e.target;
@@ -23,9 +25,18 @@ const NoLeader = () => {
     // history.push('/sign-up/otp')
     // dispatch(signUp({...userInput, location: null}))
   }
+  
+  const addMember = () => {
+    // e.preventDefault()
+    // setShowOTP(true)
+  }
+
+  const confirmOTP = (e) => {
+    setShowOTP(true)
+  }
 
   return (
-    <div className='md:w-1/3 lg:w-1/3 w-full justify-center mt-28'>
+    <div className='md:w-1/3 lg:w-1/3 w-fulljustify-center mt-5'>
         <form
         onSubmit={onSubmit}
         className="flex justify-center items-center">
@@ -62,25 +73,58 @@ const NoLeader = () => {
         { showModal ? (
             <>
               <div
-                className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                className="justify-center poppins-font items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
               >
                 <div className="relative w-auto my-6 mx-auto max-w-3xl px-5">
                   {/*content*/}
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                    {/*body*/}
-                    <div className="relative px-5 flex-auto">
-                      <p className="my-4 text-blueGray-500 text-black text-lg leading-relaxed"> Are you sure? </p>
+                    <div className="relative p-5 flex-auto">
+                      <p className="my-4 text-gray-700 text-lg leading-relaxed">Simpan informasi saya dan bergabung menjadi anggota Young Living Indonesia?</p>
                     </div>
                     {/*footer*/}
                     <div className="flex items-center justify-end p-2 border-t border-solid border-blueGray-200 rounded-b">
                       <button
-                        className="text-gray-600 hover:text-gray-800 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="text-red-300 hover:text-red-400 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowModal(false)}
                       >
                         Close
                       </button>
+                      <button
+                        className="text-green-600 hover:text-green-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button"
+                        onClick={() => setShowOTP(true)}
+                      >
+                        Daftar
+                      </button>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+            </>
+          ) : null}
+          {/* OTP */}
+          { showOTP ? (
+            <>
+              <div
+                className="justify-center poppins-font items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+              >
+                <div className="relative w-auto my-6 mx-auto max-w-3xl px-5">
+                  {/*content*/}
+                  <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                    <OTPForm confirmOTP={confirmOTP} />
+                    <button
+                        className="text-gray-400 hover:text-gray-500 px-10 text-right background-transparent  px-6 py-2 -mt-5 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button"
+                        onClick={setShowOTP(false)}
+                      >
+                        Kembali
+                      </button>
+                    {/* <div className="relative p-5 flex-auto">
+                      <p className="my-4 text-gray-700 text-lg leading-relaxed">Simpan informasi saya dan bergabung menjadi anggota Young Living Indonesia?</p>
+                    </div> */}
+                    {/*footer*/}
                   </div>
                 </div>
               </div>
