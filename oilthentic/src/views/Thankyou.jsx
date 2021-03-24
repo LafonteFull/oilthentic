@@ -22,8 +22,8 @@ const Thankyou = () => {
   return (
     <div>
       <Hero isMobile={isMobile} page={'thankyou'}/>
-      <SignUp isMobile={isMobile} />
       <KeuntunganMember isMobile={isMobile}/>
+      <SignUp isMobile={isMobile} />
       <MileStone1 isMobile={isMobile}/>
       <MileStone2 isMobile={isMobile}/>
     </div>

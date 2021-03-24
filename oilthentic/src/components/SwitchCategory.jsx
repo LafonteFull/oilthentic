@@ -23,12 +23,12 @@ const SwitchCategory = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    history.push('/sign-up/otp')
+    // history.push('/sign-up/otp')
     dispatch(signUp({...userInput, location: null}))
   }
 
-  const backgroundClass1 = pathname === '/thank-you' ? 'purple-bg text-white' : 'bg-gray-200 text-black'
-  const backgroundClass2 = pathname === '/thank-you' ? 'bg-gray-200 text-black' : 'purple-bg text-white'
+  const backgroundClass1 = pathname === '/thank-you' ? 'purple-bg text-white' : 'bg-gray-200 text-gray-400'
+  const backgroundClass2 = pathname === '/thank-you' ? 'bg-gray-200  text-gray-400' : 'purple-bg text-white'
 
   return (
     <>
@@ -37,7 +37,7 @@ const SwitchCategory = () => {
       <div className="h-full bg-center flex justify-center"
         style={{ backgroundImage: `url(${bgWeb4})` , backgroundSize: 'cover', width: '100vw' }} >
           <div className="px-10 flex text-white flex-col w-full items-center mt-15 md:mt-0">
-            <div className="flex justify-center mt-20 bg-gray-200 rounded-xl z-10">
+            <div className="flex justify-center mt-20 bg-gray-200 rounded-xl z-10 p-1">
                 <Link className={backgroundClass1 + " rounded-lg font-bold w-40 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
                 to="/thank-you">No Leader</Link>
                 <Link className={backgroundClass2 + " rounded-lg font-bold w-40 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
