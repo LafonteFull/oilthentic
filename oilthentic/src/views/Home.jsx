@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Hero, SecondSection, PreSignUp, MileStone1, MileStone2, PEP, KeuntunganMember, ThirdSection } from '../components'
+import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
+
+
 
 const Home = () => {
   
@@ -20,6 +23,7 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden merry-font">
+      <ScrollUpButton />
       <Hero isMobile={isMobile}/>
       <SecondSection isMobile={isMobile}/>
       <ThirdSection isMobile={isMobile} /> 
