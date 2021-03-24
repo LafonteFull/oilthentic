@@ -10,7 +10,7 @@ const Milestones = () => {
         <div className="flex flex-col justify-center items-center">
           <div className="text-3xl yellow-bg p-10 rounded-xl m-4">Current share: <br /> <span className="font-extrabold text-gray-900 text-5xl">289.760</span>
           {/* <FacebookIcon size={32} round={true} /> */}
-          <p>HALOO</p>
+          {/* <p>HALOO</p> */}
           {/* <FacebookShareCount url={shareUrl} className="bg-white" style={{width: '300px', height: '300px'}}/> */}
           </div>
         </div>

@@ -27,6 +27,7 @@ export { default as bgWeb5 } from './Background/BG-10.png'
 export { default as bgWeb6 } from './Background/BG-12.png'
 
 export { default as mobileTitle } from './Title/homepage-title.png'
+export { default as mobileTitleThankYou } from './Title/thank-you-title.png'
 
 export { default as product1 } from './Produk/Product-01.png'
 export { default as product2 } from './Produk/Product-02.png'

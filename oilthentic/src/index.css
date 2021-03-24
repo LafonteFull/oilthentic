@@ -18,10 +18,10 @@ body {
 }
 
 .purple-bg {
-  background-color: #B0265E;
+  background-color: #B03266;
 }
 .purple-text {
-  color: #B0265E;
+  color: #B03266;
 }
 .yellow-bg {
   background-color: #EDD2A1;
@@ -89,4 +89,11 @@ body {
 
 .innerDiv {
   background-size: 100% 100%;
+}
+
+@media (min-width: 1024px) {
+  .milestone-placement {
+    top: 30rem;
+    right: -15rem;
+  }
 }
