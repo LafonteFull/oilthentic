@@ -29,6 +29,7 @@ export { default as bgWeb3 } from './Background/BG-04.png'
 export { default as bgWeb4 } from './Background/BG-05.png'
 export { default as bgWeb5 } from './Background/BG-10.png'
 export { default as bgWeb6 } from './Background/BG-12.png'
+export { default as bgWeb7 } from './Background/BG-6&7.png'
 
 // Title header (hero)
 export { default as mobileTitle } from './Title/homepage-title.png'

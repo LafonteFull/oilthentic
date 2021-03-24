@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Hero, SecondSection, PreSignUp, MileStone1, MileStone2, PEP, KeuntunganMember, ThirdSection } from '../components'
+import { Hero, SecondSection, PreSignUp, MileStone1, MileStone2, PEP, KeuntunganMember, ThirdSection, Milestones } from '../components'
 import SignUp from '../components/SignUp'
 
 const Thankyou = () => {
@@ -24,8 +24,9 @@ const Thankyou = () => {
       <Hero isMobile={isMobile} page={'thankyou'}/>
       <KeuntunganMember isMobile={isMobile}/>
       <SignUp isMobile={isMobile} />
-      <MileStone1 isMobile={isMobile}/>
-      <MileStone2 isMobile={isMobile}/>
+      <Milestones isMobile={isMobile} />
+      {/* <MileStone1 isMobile={isMobile}/>
+      <MileStone2 isMobile={isMobile}/> */}
     </div>
   )
 }
