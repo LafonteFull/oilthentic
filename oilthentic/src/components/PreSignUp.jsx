@@ -23,12 +23,10 @@ const PreSignUp = (props) => {
 
 
   return (
-    // py-10 w-full bg-red-200 relative z-10 h-screen merry-font w-screen text-white overflow-hidden flex justify-center presignup
-    <div id="pre-signup" className="min-w-screen merry-font h-screen overflow-hidden broken-white-1"
-    style={{ backgroundColor: '#E8E3DD' }}>
-      <div className="h-full bg-center flex justify-center"
-        style={{ backgroundImage: `url(${bgWeb4})` , backgroundSize: 'cover', width: '100vw' }} >
-          <div className="px-10 flex text-white flex-col w-full items-center mt-20 md:mt-0">
+    <div id="pre-signup" className="merry-font bgImage"
+    style={{ backgroundColor: '#E8E3DD', backgroundImage: props.isMobile ? `url(${bgMobile3})` : `url(${bgWeb4})` }}>
+      <div className="h-full bg-center flex justify-center items-center" >
+          <div className="px-10 flex text-white flex-col w-full items-center -mt-20">
             <h2 className="merry-font text-white text-lg text-center mt-10 font-semibold md:text-3xl">Daftar Di Sini Untuk Ikut <br/> Oilthentic Day 2021</h2>
             <form
               onSubmit={onSubmit}
