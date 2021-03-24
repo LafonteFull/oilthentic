@@ -17,7 +17,7 @@ const PreSignUp = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    history.push('/sign-up/otp')
+    history.push('/thank-you')
     dispatch(signUp({...userInput, location: null}))
   }
 
