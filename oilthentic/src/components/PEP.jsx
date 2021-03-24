@@ -4,10 +4,9 @@ import ReactPlayer from 'react-player'
 
 const PEP = (props) => {
   return (
-    <div id="pep-video" className="merry-font h-screen overflow-hidden"
-    style={{backgroundColor: 'rgb(231,211,229)'}}>
-      <div className="h-screen bg-center flex justify-center py-10"
-        style={{ backgroundImage: props.isMobile ? '' : `url(${bgWeb5})`, backgroundSize: 'cover' }} >
+    <div id="pep-video" className="merry-font bgImage"
+    style={{ backgroundColor: '#EBD9E9', backgroundImage: props.isMobile ? `url(${bgMobile8})` : `url(${bgWeb5})` }}>
+      <div className="flex text-white flex-col w-full items-center py-10">
           <div className="px-10 flex flex-col justify-center items-center content-center">
             <h3 className="purple-text merry-font text-center font-bold mt-10 text-base md:text-3xl">Kenapa Kamu Harus Beli PEP Young Living</h3>
             <div className="px-10 flex justify-center my-4 w-96">
