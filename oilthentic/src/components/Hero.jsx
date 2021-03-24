@@ -9,8 +9,8 @@ const Hero = (props) => {
       <div className="bgImage" id="herobanner"
         style={{ backgroundImage: props.isMobile ? `url(${bgMobile1})` : `url(${bgWeb1})`,
         backgroundColor: '#E8E3DD'}} >
-        <div className="px-5 flex flex-col justify-center items-center h-full w-full">
-        <img src={props.page === 'thankyou' ? mobileTitleThankYou : mobileTitle} alt="Road to Oilthentic Day 2021" className="landingtitle"
+        <div className="px-5 flex flex-col justify-center items-center h-full w-full mt-10">
+        <img src={props.page === 'thankyou' ? mobileTitleThankYou : mobileTitle} alt="Road to Oilthentic Day 2021" className="landingtitle -mt-40 mb-10"
           style={{ width: props.isMobile ? '20rem' : '40rem' }} 
           />
           { props.page !== 'thankyou' && (
