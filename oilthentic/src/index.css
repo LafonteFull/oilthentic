@@ -70,3 +70,30 @@ body {
 /* .landingtitle {
   width: 20rem;
 } */
+
+.bgImage {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+ 
+.bghalf {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100%;
+}
+
+.innerDiv {
+  background-size: 100% 100%;
+}
+
+@media (min-width: 1024px) {
+  .milestone-placement {
+    top: 30rem;
+    right: -15rem;
+  }
+}

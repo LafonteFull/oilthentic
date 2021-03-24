@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { signUp } from '../store/actions/authAction';
-import { bgMobile3, bgWeb4, buttonKirim } from '../assets/index'
+import { bgWeb4 } from '../assets/index'
 import { Link, useLocation } from "react-router-dom";
 import { KnowLeader, NoLeader } from ".";
 import { Route, Switch } from "react-router-dom";

@@ -22,14 +22,10 @@ const Thankyou = () => {
   return (
     <div>
       <Hero isMobile={isMobile} page={'thankyou'}/>
-      {/* <SecondSection isMobile={isMobile}/> */}
-      {/* { !isMobile && <ThirdSection /> } */}
-      {/* <PreSignUp isMobile={isMobile}/> */}
       <SignUp isMobile={isMobile} />
       <KeuntunganMember isMobile={isMobile}/>
       <MileStone1 isMobile={isMobile}/>
       <MileStone2 isMobile={isMobile}/>
-      {/* <PEP isMobile={isMobile}/> */}
     </div>
   )
 }

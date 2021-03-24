@@ -9,12 +9,12 @@ const Hero = (props) => {
   // }, [props])
 
   return (
-    <div className="merry-font h-screen overflow-hidden broken-white-1"
-    style={{ backgroundColor: '#E8E3DC', minWidth: '100vw' }}>
-      <div className="w-screen h-full bg-center bg-cover flex flex-col justify-center"
-        style={{ backgroundImage: props.isMobile ? `url(${bgMobile1})` : `url(${bgWeb1})`, backgroundSize: 'cover' }} >
-        <div className="px-5 flex flex-col justify-center items-center content-center w-screen">
-          <img src={props.page === 'thankyou' ? mobileTitleThankYou : mobileTitle} alt="Road to Oilthentic Day 2021" className="landingtitle"
+    // <div className="merry-font h-full w-full bg-red-200 flex justify-center">
+      <div className="bgImage"
+        style={{ backgroundImage: props.isMobile ? `url(${bgMobile1})` : `url(${bgWeb1})`,
+        backgroundColor: '#E8E3DD'}} >
+        <div className="px-5 flex flex-col justify-center items-center h-full w-full">
+        <img src={props.page === 'thankyou' ? mobileTitleThankYou : mobileTitle} alt="Road to Oilthentic Day 2021" className="landingtitle"
           style={{ width: props.isMobile ? '20rem' : '40rem' }} 
           />
           {props.page !== 'thankyou' && (
@@ -32,7 +32,7 @@ const Hero = (props) => {
           )}
         </div>
       </div>
-    </div>
+    // </div>
   )
 }
 

@@ -8,12 +8,12 @@ const MileStone2 = (props) => {
     style={{ backgroundColor: '#E8E3DD' }}>
       <div className="min-w-screen h-full bg-center bg-cover flex justify-center "
         style={{ backgroundImage: props.isMobile ? `url(${bgMobile5})` : `url(${webMilestone4})`, backgroundSize: 'cover' }} >
-          <div className="px-5 flex flex-col justify-center md:items-start  w-screen">
+          <div className="px-5 flex flex-col justify-end py-20 md:items-start  w-screen">
             {/* Bubble */}
-              <div className=" px-2 md:w-1/2 w-1/2 flex flex-end">
-                <img src={bubble3BW} alt="300.000 shares" className="w-32 right-0 md:w-48 self-end"/>
+              <div className=" px-2 md:w-1/2 w-full flex relative -top-32 right-6">
+                <img src={bubble3BW} alt="300.000 shares" className="w-32 right-0 md:w-48 self-end absolute"/>
               </div>
-              <div className=" bottom-0 px-2 md:w-1/2 w-full">
+              <div className=" bottom-0 px-2 md:w-1/2 w-full relative bottom-10">
                 <img src={bubble4BW} alt="400.000 shares"  className="w-44 md:w-64"/>
               </div>
             {/* End of bubble */}

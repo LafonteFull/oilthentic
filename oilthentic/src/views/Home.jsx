@@ -19,10 +19,10 @@ const Home = () => {
   }, [isMobile])
 
   return (
-    <div>
+    <div className="overflow-x-hidden merry-font">
       <Hero isMobile={isMobile}/>
       <SecondSection isMobile={isMobile}/>
-      {/* { !isMobile && <ThirdSection /> } */}
+      <ThirdSection isMobile={isMobile} /> 
       <PreSignUp isMobile={isMobile}/>
       <MileStone1 isMobile={isMobile}/>
       <MileStone2 isMobile={isMobile}/>
