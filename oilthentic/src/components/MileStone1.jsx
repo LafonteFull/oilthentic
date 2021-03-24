@@ -4,7 +4,7 @@ import { bgMobile4, webMilestone2, shareFB, shareWA, shareTW,
 
 const MileStone1 = (props) => {
   return (
-    <div className="w-screen merry-font h-screen overflow-hidden"
+    <div className="w-screen merry-font h-screen overflow-visible"
     style={{ backgroundColor: '#E8E3DD' }}>
       <div className="min-w-screen h-full bg-center bg-cover flex justify-center"
         style={{ backgroundImage: props.isMobile ? `url(${bgMobile4})` : `url(${webMilestone2})` , backgroundSize: 'cover' }} >
@@ -27,12 +27,14 @@ const MileStone1 = (props) => {
               </div>
             </div>
             {/* END OF MILESTONE NUMBER */}
-              <div className="relative px-2 top-96 lg:right-5 md:right-5 -right-20">
-                <img src={bubble2} alt="100.000 shares" className="w-32"/>
+            <div className="flex flex-col w-screen gap-48">
+              <div className="px-2 self-end mt-32">
+                <img src={bubble1} alt="100.000 shares" className="w-32"/>
               </div>
-              <div className="relative bottom-0 px-2 lg:left-0 md:left-0 -left-28">
-                <img src={bubble1} alt="200.000 shares" className="w-32"/>
+              <div className="px-2 self-start">
+                <img src={bubble2} alt="200.000 shares" className="w-32"/>
               </div>
+            </div>
         </div>
       </div>
     </div>
