@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player'
 
 const PEP = (props) => {
   return (
-    <div id="pep-video" className="merry-font bgImage"
+    <div id="pep-video" className="merry-font bghalf"
     style={{  backgroundColor: '#E8E3DD' , backgroundImage: props.isMobile ? `url(${bgMobile8})` : `url(${bgWeb5})` }}>
       <div className="flex text-white flex-col w-full items-center py-10">
           <div className="px-10 flex flex-col justify-center items-center content-center">

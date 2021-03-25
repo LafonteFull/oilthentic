@@ -19,7 +19,6 @@ export const addUserToDB = (history) => {
         url: '/signup',
         data: user
       })
-      history.push('/thank-you')
     } catch (err) {
     console.log(err)
     }

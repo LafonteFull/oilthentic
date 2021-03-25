@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { signUp } from '../store/actions/authAction';
+import React from "react";
+// import { useHistory } from 'react-router-dom';
+// import { useDispatch } from 'react-redux';
+// import { signUp } from '../store/actions/authAction';
 import { bgWeb4 } from '../assets/index'
 import { Link, useLocation } from "react-router-dom";
 import { KnowLeader, NoLeader } from ".";
@@ -11,21 +11,19 @@ import { Route, Switch } from "react-router-dom";
 
 const SwitchCategory = () => {
   const { pathname } = useLocation()
-  const history = useHistory()
-  const dispatch = useDispatch()
-  const [userInput, setUserInput] = useState()
+  // const dispatch = useDispatch()
+  // const [userInput, setUserInput] = useState()
 
-  const onChange = (e) => {
-    let { name, value } = e.target;
-    const newInput = { ...userInput, [name]: value };
-    setUserInput(newInput);
-  };
+  // const onChange = (e) => {
+  //   let { name, value } = e.target;
+  //   const newInput = { ...userInput, [name]: value };
+  //   setUserInput(newInput);
+  // };
 
-  const onSubmit = (e) => {
-    e.preventDefault()
-    // history.push('/sign-up/otp')
-    dispatch(signUp({...userInput, location: null}))
-  }
+  // const onSubmit = (e) => {
+  //   e.preventDefault()
+  //   dispatch(signUp({...userInput, location: null}))
+  // }
 
   const backgroundClass1 = pathname === '/thank-you' ? 'purple-bg text-white' : 'bg-gray-200 text-gray-400'
   const backgroundClass2 = pathname === '/thank-you' ? 'bg-gray-200  text-gray-400' : 'purple-bg text-white'

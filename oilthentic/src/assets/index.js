@@ -13,6 +13,7 @@ export { default as bgMobile6 } from './Background/Background-7.png'
 export { default as bgMobile7 } from './Background/Background-8.png'
 export { default as bgMobile8 } from './Background/Background-9.png'
 export { default as bgMobile9 } from './Background/Background-10.png'
+export { default as BGmilestonemobile } from './Background/BGmilestonemobile.png'
 
 export { default as webMilestone1 } from './Background/webMilestone1.png'
 export { default as webMilestone2 } from './Background/webMilestone2.png'

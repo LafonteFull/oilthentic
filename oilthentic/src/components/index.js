@@ -8,7 +8,7 @@ export { default as MileStone1 } from './MileStone1'
 export { default as MileStone2 } from './MileStone2'
 export { default as PEP } from './PEP'
 export { default as KeuntunganMember } from './KeuntunganMember'
-
+export { default as ModalInfoAcara } from './modalInfoAcara'
 
 export { default as HowItWorks } from './HowItWorks'
 export { default as Benefits } from './Benefits'
