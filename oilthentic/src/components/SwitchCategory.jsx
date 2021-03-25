@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import { useHistory } from 'react-router-dom';
 // import { useDispatch } from 'react-redux';
 // import { signUp } from '../store/actions/authAction';
@@ -13,6 +13,7 @@ const SwitchCategory = () => {
   const { pathname } = useLocation()
   // const dispatch = useDispatch()
   // const [userInput, setUserInput] = useState()
+  const [category, setCategory] = useState(false);
 
   // const onChange = (e) => {
   //   let { name, value } = e.target;
@@ -25,8 +26,8 @@ const SwitchCategory = () => {
   //   dispatch(signUp({...userInput, location: null}))
   // }
 
-  const backgroundClass1 = pathname === '/thank-you' ? 'purple-bg text-white' : 'bg-gray-200 text-gray-400'
-  const backgroundClass2 = pathname === '/thank-you' ? 'bg-gray-200  text-gray-400' : 'purple-bg text-white'
+  const backgroundClass1 = !category ? 'purple-bg text-white' : 'bg-gray-200 text-gray-400'
+  const backgroundClass2 = !category ? 'bg-gray-200  text-gray-400' : 'purple-bg text-white'
 
   return (
     <>
@@ -36,15 +37,15 @@ const SwitchCategory = () => {
         style={{ backgroundImage: `url(${bgWeb4})` }} >
           <div className="px-10 flex text-white flex-col w-full items-center mt-15 md:mt-0">
             <div className="flex justify-center mt-20 bg-gray-200 rounded-xl z-10 p-1">
-                <Link className={backgroundClass1 + " rounded-lg mr-1 font-bold md:w-40 w-32 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
-                to="/thank-you">No Leader</Link>
-                <Link className={backgroundClass2 + " rounded-lg font-bold md:w-40 w-32 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
-                to="/thank-you/know-leader">Know Leader</Link>
+                <button className={backgroundClass1 + " rounded-lg mr-1 font-bold md:w-40 w-32 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
+                onClick={() => setCategory(false)}>No Leader</button>
+                <button className={backgroundClass2 + " rounded-lg font-bold md:w-40 w-32 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
+                onClick={() => setCategory(true)}>Know Leader</button>
             </div>
-            <Switch>
-              <Route exact path="/thank-you" component={NoLeader} />
-              <Route exact path="/thank-you/know-leader" component={KnowLeader} />
-            </Switch>
+            {!category && <NoLeader />}
+            {category && <KnowLeader />}
+              {/* <Route exact path="/thank-you" component={NoLeader} />
+              <Route exact path="/thank-you/know-leader" component={KnowLeader} /> */}
         </div>
       </div>
     </div>
