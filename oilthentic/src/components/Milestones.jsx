@@ -1,6 +1,6 @@
 import React from 'react'
 // import Fade from 'react-reveal/Fade';
-import { bgMobile4, webMilestone2, shareFB, shareWA, shareTW, step2, bgWeb7 } from '../assets/index'
+import { shareFB, shareWA, shareTW, step2, bgWeb7 } from '../assets/index'
 
 const Milestones = (props) => {
 
@@ -9,7 +9,7 @@ const Milestones = (props) => {
     style={{ backgroundColor: '#E8E3DD',  backgroundImage: `url(${bgWeb7})` }}>
       <div className="w-full h-full flex flex-col md:flex-row justify-center items-center py-5">
         <div className="block md:hidden lg:hidden flex justify-center flex-col items-center ">
-          <h3 className="purple-text merry-font text-center text-lg font-bold px-10">Pencapaian Menuju Lebih Banyak Hadiah</h3>
+          <h3 className="purple-text merry-font text-center text-lg font-bold px-10 mt-10">Pencapaian Menuju Lebih Banyak Hadiah</h3>
           <div className="milestone-box w-64 md:w-80 flex justify-center flex-col rounded-3xl bg-white mt-10 h-32 relative">
               <div className="absolute purple-bg rounded-full py-2 px-8 text-2xl text-full text-gray-100 relative merry-font
               share-count flex flex-col items-center text-center mx-auto rounded-xl w-3/4 md:w-3/4">
@@ -24,7 +24,7 @@ const Milestones = (props) => {
                 </div>
               </div>
             </div>
-            <img src={step2} className="my-2 relative left-10" style={{width: 'auto' }}/>
+            <img src={step2} alt="Milestone progress" className="my-2 relative left-10" style={{width: 'auto' }}/>
             <div className="flex justify-center flex-col items-center mt-4 px-3 w-full">
                 <h2 className="purple-text text-lg merry-font text-center font-bold text-base">Syarat dan Ketentuan</h2>
                   <div className="flex flex-row flex-wrap poppins-font purple-text my-5">
@@ -47,7 +47,7 @@ const Milestones = (props) => {
         <div className="w-full py-5 hidden md:block lg:block">
           <div className="flex flex-row w-full">
             <div className="w-1/2 py-10 px-20">
-              <img src={step2} className="" style={{minHeight: '100vh', width: 'auto' }}/>
+              <img src={step2} className="" alt="Milestone progress" style={{minHeight: '100vh', width: 'auto' }}/>
             </div>
             <div className="w-1/2 flex justify-center flex-col items-center">
               <div className="flex justify-center flex-col items-center w-full">

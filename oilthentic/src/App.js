@@ -7,6 +7,19 @@ import './App.css';
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
+  // const[isAutheticated, setisAutheticated] = useState(false)
+  
+  // useEffect(() => {
+  //   effect
+  //   return () => {
+  //     cleanup
+  //   }
+  // }, [input])
+
+  // const preSignUp = () => {
+  //   setisAutheticated(true)
+  // }
+
   return (
     <Provider store={store}>
       <Router>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Hero, SecondSection, PreSignUp, MileStone1, MileStone2, PEP, KeuntunganMember, ThirdSection, Milestones } from '../components'
+import { Hero, SecondSection, PreSignUp, PEP, KeuntunganMember, ThirdSection, Milestones } from '../components'
 import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       if (window.innerWidth < 1000) setMobile(true)
       else setMobile(false)
     }
-
+  
     window.addEventListener('resize', detectScreenWidth)
 
     return () => {
@@ -27,8 +27,6 @@ const Home = () => {
       <ThirdSection isMobile={isMobile} /> 
       <PreSignUp isMobile={isMobile}/>
       <Milestones isMobile={isMobile}/>
-      {/* <MileStone1 isMobile={isMobile}/>
-      <MileStone2 isMobile={isMobile}/> */}
       <PEP isMobile={isMobile}/>
       <KeuntunganMember isMobile={isMobile}/>
     </div>

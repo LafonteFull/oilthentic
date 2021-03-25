@@ -1,20 +1,8 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router";
-import { useSelector } from 'react-redux';
 
 const OTPForm = (props) => {
   console.log(props, 'ini dari otp form');
-  const [OTP, setOTP] = useState({
-
-  })
-  const history = useHistory()
-  const { user } = useSelector((state) => state.user)
-  console.log(user, '<<< user info from redux')
-
-  // const handleSubmit = () => {
-  //   history.push('/thank-you') // sementara
-  // }
-  const [otpDone, setOtpDone] = useState(false)
+  const [OTP, setOTP] = useState({})
 
   const onChange = (e) => {
     let { name, value } = e.target;
@@ -30,59 +18,58 @@ const OTPForm = (props) => {
       temp+= OTP[key]
     }
     console.log(temp);
-    if (temp.length === 6) setOtpDone(true)
+    if (temp.length === 6) props.addMember(e)
   }
 
   return (
     <form
       onSubmit={onSubmit}
       className="flex justify-center flex-row px-10">
-        <div className="divide-y divide-gray-200">
           <div className="py-8 text-base text-gray-900">
             <div className="">
-              <h2 className="text-xl text-center md:text-4xl lg:text-4xl font-bold">OTP Verification</h2>
-              <h2 className="text-sm italic text-center m-2 text-gray-700">Please enter the code that's just sent to your phone.</h2>
+              <h2 className="text-xl text-center md:text-4xl lg:text-4xl font-bold">Verifikasi nomor handphone Anda</h2>
+              <h2 className="text-sm italic text-center m-2 text-gray-700">Masukkan kode OTP terkirim.</h2>
             </div>
-            <div className="grid grid-cols-6 gap-2 h-14 mt-10">
+            <div className="grid grid-cols-6 gap-1 h-12 mt-5">
                 <input
                   name="first"
                   type="text"
-                  maxlength="1"
+                  maxLength="1"
                   className="md:px-4 lg:px-4 lg:py-2 md:py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                   onChange={onChange}
                 />
                 <input
                   name="second"
                   type="text"
-                  maxlength="1"
+                  maxLength="1"
                   className="md:px-4 lg:px-4 lg:py-2 md:py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                   onChange={onChange}
                 />
                 <input
                   name="third"
                   type="text"
-                  maxlength="1"
+                  maxLength="1"
                   className="md:px-4 lg:px-4 lg:py-2 md:py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                   onChange={onChange}
                 />
                 <input
                   name="fourth"
                   type="text"
-                  maxlength="1"
+                  maxLength="1"
                   className="md:px-4 lg:px-4 lg:py-2 md:py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                   onChange={onChange}
                 />
                 <input
                   name="fifth"
                   type="text"
-                  maxlength="1"
+                  maxLength="1"
                   className="md:px-4 lg:px-4 lg:py-2 md:py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                   onChange={onChange}
                 />
                 <input
                   name="sixth"
                   type="text"
-                  maxlength="1"
+                  maxLength="1"
                   className="md:px-4 lg:px-4 lg:py-2 md:py-2 border focus:ring-gray-500 focus:border-gray-900 w-full text-center sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                   onChange={onChange}
                 />
@@ -90,21 +77,19 @@ const OTPForm = (props) => {
             <div className="pt-4 flex items-center space-x-4">
               <button
                 type="submit"
-                className="inline flex justify-center items-center w-full text-gray-500 px-4 py-3 hover:text-gray-700"
+                className="inline flex justify-center text-sm items-center w-full text-gray-400 px-4 py-3 hover:text-gray-700"
               >
-                Request New OTP
+                Kirim ulang kode OTP
               </button>
             </div>
-            <div className="pt-4 flex items-center space-x-4 mt-10">
+            <div className="pt-4 flex items-center space-x-4 ">
                 <button
                   type="submit"
                   className="bg-white flex justify-center items-center w-full text-black px-4 py-3 rounded-md border-solid border border-gray-400 hover:text-gray-600"
-                  // onClick={onClick(otpDone)}
                 >
-                  Continue
+                  Submit
                 </button>
             </div>
-          </div>
         </div>
       </form>
   )
