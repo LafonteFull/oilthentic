@@ -6,7 +6,7 @@ const tokenGenerate = (payload) => {
 };
 
 const checkToken = (access_token) => {
-  return jwt.decode(token, SECRET_KEY);
+  return jwt.decode(access_token, SECRET_KEY);
 };
 
 module.exports = {
