@@ -31,8 +31,7 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty: {
           msg: 'Member ID is required'
         }
-      },
-      unique: true
+      }
     },
     preSignupId: {
       type: DataTypes.INTEGER,
