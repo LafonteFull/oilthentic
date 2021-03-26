@@ -15,10 +15,17 @@ const errorHandlers = (err, req, res) => {
         statusCode = 400
         errorObj.message = 'OTP Send Error'
         break;
+      case "Error update share count":
+        statusCode = 400
+        errorObj.message = 'Error update share count'
       case "OTP Not Match":
         console.log('error test <<<');
         statusCode = 403
         errorObj.message = 'OTP Not Match'
+        break;
+      case "TypeError":
+        statusCode = 403
+        errorObj.message = 'Please register first'
         break;
       case "resourceNotFound":
         statusCode = 404
@@ -27,10 +34,6 @@ const errorHandlers = (err, req, res) => {
       case "Social Media not found":
         statusCode = 404
         errorObj.message = 'Social Media not found'
-        break;
-      case "TypeError":
-        statusCode = 403
-        errorObj.message = 'Please register first'
         break;
       default:
         console.log("name ->>", err.name);

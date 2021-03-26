@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { signUp } from '../store/actions/authAction';
+import { preSignUp } from '../store/actions/authAction';
 import { bgMobile3, bgWeb4, buttonKirim } from '../assets/index'
 
 const PreSignUp = (props) => {
@@ -18,7 +18,7 @@ const PreSignUp = (props) => {
   const onSubmit = (e) => {
     e.preventDefault()
     history.push('/thank-you')
-    dispatch(signUp({...userInput, location: null}))
+    dispatch(preSignUp({...userInput}))
   }
 
 
