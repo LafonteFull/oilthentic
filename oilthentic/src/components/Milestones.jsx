@@ -1,8 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { getTotalCount } from '../store/actions/totalSharedAction'
 // import Fade from 'react-reveal/Fade';
-import { shareFB, shareWA, shareTW, step2, bgWeb7 } from '../assets/index'
+import { shareFB, shareWA, shareTW, step0, step1, step2, step3, step4, bgWeb7 } from '../assets/index'
+import { FacebookShareButton, WhatsappShareButton } from "react-share";
 
 const Milestones = (props) => {
+  const dispatch = useDispatch()
+  const { totalShareAll } = useSelector(state => state.totalShared)
+
+  const [milestoneImage, setMileStoneImage] = useState(step0)
+
+  useEffect(() => {
+    dispatch(getTotalCount())
+  }, [])
+
+  useEffect(() => {
+    if (totalShareAll <  100000) {
+      setMileStoneImage(step0)
+    } else if (totalShareAll <  200000) {
+      setMileStoneImage(step1)
+    } else if (totalShareAll <  300000) {
+      setMileStoneImage(step2)
+    } else if (totalShareAll <  400000) {
+      setMileStoneImage(step3)
+    } else if (totalShareAll >=  400000) {
+      setMileStoneImage(step4)
+    } else {
+      setMileStoneImage(step0)
+    }
+  }, [totalShareAll])
 
   return (
     <div id="pre-signup" className="merry-font bghalf"
@@ -13,7 +40,7 @@ const Milestones = (props) => {
           <div className="milestone-box w-64 md:w-80 flex justify-center flex-col rounded-3xl bg-white mt-10 h-32 relative">
               <div className="absolute purple-bg rounded-full py-2 px-8 text-2xl text-full text-gray-100 relative merry-font
               share-count flex flex-col items-center text-center mx-auto rounded-xl w-3/4 md:w-3/4">
-                <h1>123,000</h1>
+                <h1>{totalShareAll.toLocaleString('id')}</h1>
               </div>
               <div className="purple-text flex flex-col text-center text-sm py-10 flex flex-col items-center rounded-xl md:text-base md:font-bold">
                 <p className="-mt-5 mb-3">Orang sudah bergabung</p>
@@ -24,7 +51,7 @@ const Milestones = (props) => {
                 </div>
               </div>
             </div>
-            <img src={step2} alt="Milestone progress" className="my-2 relative left-10" style={{width: 'auto' }}/>
+            <img src={milestoneImage} alt="Milestone progress" className="my-2 relative left-10" style={{width: 'auto' }}/>
             <div className="flex justify-center flex-col items-center mt-4 px-3 w-full">
                 <h2 className="purple-text text-lg merry-font text-center font-bold text-base">Syarat dan Ketentuan</h2>
                   <div className="flex flex-row flex-wrap poppins-font purple-text my-5">
@@ -47,7 +74,7 @@ const Milestones = (props) => {
         <div className="w-full py-5 hidden xl:block">
           <div className="flex flex-row w-full">
             <div className=" py-10 px-20">
-              <img src={step2} className="" alt="Milestone progress" style={{minHeight: '100vh', width: 'auto' }}/>
+              <img src={milestoneImage} className="" alt="Milestone progress" style={{minHeight: '100vh', width: 'auto' }}/>
             </div>
             <div className="w-1/2 flex justify-center flex-col items-center">
               <div className="flex justify-center flex-col items-center w-full">
@@ -55,14 +82,24 @@ const Milestones = (props) => {
                 <div className="milestone-box w-100 flex justify-center flex-col rounded-3xl bg-white mt-10 h-64 relative">
                     <div className="absolute purple-bg rounded-full py-2 px-8 text-2xl text-full text-gray-100 relative merry-font
                     share-count flex flex-col items-center text-center mx-auto rounded-xl w-3/4 -top-5 ">
-                      <h1 className="text-4xl">123,000</h1>
+                      <h1 className="text-4xl">{totalShareAll.toLocaleString('id')}</h1>
                     </div>
                     <div className="purple-text flex flex-col text-center text-sm py-10 flex flex-col items-center rounded-xl md:text-base md:font-bold">
                       <p className="-mt- mb-3 text-2xl">Orang sudah bergabung</p>
                       <div className="flex flex-row justify-center px-2 mt-5">
+                      <FacebookShareButton 
+                        url={"https://oilthentic-test.web.app"}
+                        quote={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}
+                        hashtag="#oilthenticday2021">
                         <img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer"/>
+                      </FacebookShareButton>
+                        {/* <a href="http://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fwww.myDomain.com%2Fpath%2F"><img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer"/></a> */}
+                      <WhatsappShareButton 
+                        url={"https://oilthentic-test.web.app/"}
+                        title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
                         <img src={shareWA} alt="Share WhatsApp" className="h-16 cursor-pointer"/>
-                        <img src={shareTW} alt="Share Twitter" className="h-16 cursor-pointer"/>
+                      </WhatsappShareButton>
+                        <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=Jadilah%20bagian%20dari%20gerakan%20ini%20dan%20dapatkan%20promo%20Young%20Living%20https://oilthentic-test.web.app/"><img src={shareTW} alt="Share Twitter" className="h-16 cursor-pointer"/></a>
                       </div>
                     </div>
                   </div>

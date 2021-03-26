@@ -5,7 +5,8 @@ export const preSignUp = (payload) => {
   return async (dispatch, getState) => {
     try {
       console.log('masuk action', payload);
-      // const 
+      const { name, email, phone_number } = payload
+      const access_token = await axios.post('/presing-up')
     } catch (err) {
       console.log(err);
     }

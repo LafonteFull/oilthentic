@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const OTPForm = (props) => {
-  console.log(props, 'ini dari otp form');
   const [OTP, setOTP] = useState({})
 
   const onChange = (e) => {
