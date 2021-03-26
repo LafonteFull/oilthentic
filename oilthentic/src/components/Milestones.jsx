@@ -7,8 +7,8 @@ const Milestones = (props) => {
   return (
     <div id="pre-signup" className="merry-font bghalf"
     style={{ backgroundColor: '#E8E3DD',  backgroundImage: `url(${bgWeb7})` }}>
-      <div className="w-full h-full flex flex-col md:flex-row justify-center items-center py-5">
-        <div className="block md:hidden lg:hidden flex justify-center flex-col items-center ">
+      <div className="w-full h-full flex flex-col xl:flex-row justify-center items-center py-5">
+        <div className="block xl:hidden flex justify-center flex-col items-center ">
           <h3 className="purple-text merry-font text-center text-lg font-bold px-10 mt-10">Pencapaian Menuju Lebih Banyak Hadiah</h3>
           <div className="milestone-box w-64 md:w-80 flex justify-center flex-col rounded-3xl bg-white mt-10 h-32 relative">
               <div className="absolute purple-bg rounded-full py-2 px-8 text-2xl text-full text-gray-100 relative merry-font
@@ -20,7 +20,7 @@ const Milestones = (props) => {
                 <div className="flex flex-row justify-center px-2 ">
                   <img src={shareFB} alt="Share Facebook" className="h-8 md:h-10 cursor-pointer"/>
                   <img src={shareWA} alt="Share WhatsApp" className="h-8 md:h-10 cursor-pointer"/>
-                  <img src={shareTW} alt="Share Twitter" className="h-8 md:h-10 cursor-pointer"/>
+                  <img src={shareTW} alt="Share Twitter" className="h-8 md:h-10 cursor-pointer twitter-share-button outline-none focus:outline-none"/>
                 </div>
               </div>
             </div>
@@ -44,9 +44,9 @@ const Milestones = (props) => {
               </div>
         </div>
         {/* WEB VERSION */}
-        <div className="w-full py-5 hidden md:block lg:block">
+        <div className="w-full py-5 hidden xl:block">
           <div className="flex flex-row w-full">
-            <div className="w-1/2 py-10 px-20">
+            <div className=" py-10 px-20">
               <img src={step2} className="" alt="Milestone progress" style={{minHeight: '100vh', width: 'auto' }}/>
             </div>
             <div className="w-1/2 flex justify-center flex-col items-center">
