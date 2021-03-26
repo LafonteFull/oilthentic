@@ -8,6 +8,7 @@ import { FacebookShareButton, WhatsappShareButton } from "react-share";
 const Milestones = (props) => {
   const dispatch = useDispatch()
   const { totalShareAll } = useSelector(state => state.totalShared)
+  console.log(totalShareAll, 'halo manda')
 
   const [milestoneImage, setMileStoneImage] = useState(step0)
 
@@ -51,7 +52,7 @@ const Milestones = (props) => {
                 </div>
               </div>
             </div>
-            <img src={milestoneImage} alt="Milestone progress" className="my-2 relative left-10" style={{width: 'auto' }}/>
+            <img src={milestoneImage} alt="Milestone progress" className="my-2 px-5" style={{width: 'auto' }}/>
             <div className="flex justify-center flex-col items-center mt-4 px-3 w-full">
                 <h2 className="purple-text text-lg merry-font text-center font-bold text-base">Syarat dan Ketentuan</h2>
                   <div className="flex flex-row flex-wrap poppins-font purple-text my-5">

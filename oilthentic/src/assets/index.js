@@ -36,14 +36,17 @@ export { default as bgWeb5 } from './Background/BG-8.png'
 export { default as bgWeb6 } from './Background/BG-12.png'
 export { default as bgWeb7 } from './Background/BG-6&7.png'
 export { default as bgr20 } from './Background/BGR-20.png'
+export { default as bgr10 } from './Background/BGR-10.png'
 
 // Title header (hero)
 export { default as mobileTitle } from './Title/homepage-title.png'
 export { default as mobileTitleThankYou } from './Title/thank-you-title.png'
 
+// Product
 export { default as product1 } from './Produk/Product-01.png'
 export { default as product2 } from './Produk/Product-02.png'
 export { default as product3 } from './Produk/Product-03.png'
+export { default as bothproducts } from './Produk/Promo.png'
 
 export { default as paketA } from './Paket/Paket-A.png'
 export { default as paketB } from './Paket/Paket-B.png'

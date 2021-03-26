@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "visquare",
-    "password": "visquare",
+    "username": "visquares",
+    "password": "visquares",
     "database": "oilthentic",
     "host": "127.0.0.1",
     "dialect": "postgres"
