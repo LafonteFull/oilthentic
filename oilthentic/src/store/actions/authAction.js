@@ -5,6 +5,7 @@ export const preSignUp = (payload) => {
   return async (dispatch, getState) => {
     try {
       console.log('masuk action', payload);
+      // const 
     } catch (err) {
       console.log(err);
     }
@@ -25,7 +26,7 @@ export const signUp = (history) => {
       const { user } = getState().user
       await axios({
         method: 'post',
-        url: '/signup',
+        url: '/sign-up',
         data: user
       })
     } catch (err) {
