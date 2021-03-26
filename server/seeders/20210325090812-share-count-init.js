@@ -11,13 +11,27 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await queryInterface.bulkInsert('ShareCounts', [{
-     Twitter: 0,
-     Facebook: 0,
-     WhatsApp: 0,
-     createdAt: new Date(),
-     updatedAt: new Date()
-   }], {})
+   const socialMedia = [
+    {
+      name: 'Facebook',
+      shareCount: 0,
+    },
+    {
+      name: 'Twitter',
+      shareCount: 0,
+    },
+    {
+      name: 'WhatsApp',
+      shareCount: 0,
+    }
+  ]
+
+  socialMedia.forEach(socialMedia => {
+    socialMedia.createdAt = new Date(),
+    socialMedia.updatedAt = new Date()
+  })
+
+   await queryInterface.bulkInsert('SocialMedia', socialMedia, {})
   },
 
   down: async (queryInterface, Sequelize) => {
