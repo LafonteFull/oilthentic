@@ -22,7 +22,11 @@ export { default as webMilestone4 } from './Background/webMilestone4.png'
 export { default as webMilestone5 } from './Background/webMilestone5.png'
 
 // Tangkai & bubble milestone
-export { default as step2 } from './Milestone/2.png'
+export { default as step0 } from './Milestone/step0.png'
+export { default as step1 } from './Milestone/step1.png'
+export { default as step2 } from './Milestone/step2.png'
+export { default as step3 } from './Milestone/step3.png'
+export { default as step4 } from './Milestone/step4.png'
 
 export { default as bgWeb1 } from './Background/BG-02.png'
 export { default as bgWeb2 } from './Background/BG-03.png'
@@ -57,8 +61,8 @@ export { default as siteFooter } from './Icon/BW.png'
 
 // social media share
 export { default as shareFB } from './ButtonShare/FB.png'
-export { default as shareTW } from './ButtonShare/WA.png'
-export { default as shareWA } from './ButtonShare/IN.png'
+export { default as shareWA } from './ButtonShare/WA.png'
+export { default as shareTW } from './ButtonShare/IN.png'
 
 export { default as bubble1 } from './MileStoneBubble/Milestone-01.png'
 export { default as bubble2 } from './MileStoneBubble/Milestone-02.png'
