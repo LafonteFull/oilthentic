@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class ShareCount extends Model {
+  class SocialMedia extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,13 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
-  ShareCount.init({
-    Twitter: DataTypes.INTEGER,
-    Facebook: DataTypes.INTEGER,
-    WhatsApp: DataTypes.INTEGER
+  SocialMedia.init({
+    name: DataTypes.STRING,
+    shareCount: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'ShareCount',
+    modelName: 'SocialMedia',
   });
-  return ShareCount;
+  return SocialMedia;
 };

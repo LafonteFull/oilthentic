@@ -44,8 +44,6 @@ const SwitchCategory = () => {
             </div>
             {!category && <NoLeader />}
             {category && <KnowLeader />}
-              {/* <Route exact path="/thank-you" component={NoLeader} />
-              <Route exact path="/thank-you/know-leader" component={KnowLeader} /> */}
         </div>
       </div>
     </div>

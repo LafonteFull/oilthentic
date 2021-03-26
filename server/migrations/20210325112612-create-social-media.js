@@ -1,20 +1,17 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('ShareCounts', {
+    await queryInterface.createTable('SocialMedia', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      Twitter: {
-        type: Sequelize.INTEGER
+      name: {
+        type: Sequelize.STRING
       },
-      Facebook: {
-        type: Sequelize.INTEGER
-      },
-      WhatsApp: {
+      shareCount: {
         type: Sequelize.INTEGER
       },
       createdAt: {
@@ -28,6 +25,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('ShareCounts');
+    await queryInterface.dropTable('SocialMedia');
   }
 };
