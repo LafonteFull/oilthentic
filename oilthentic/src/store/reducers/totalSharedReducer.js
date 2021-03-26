@@ -1,5 +1,5 @@
 const initialState = {
-  totalShareAll: 10000
+  totalShareAll: 0
 }
 
 const totalSharedReducer = ( state = initialState, action ) => {

@@ -34,7 +34,6 @@ const Milestones = (props) => {
         setMileStoneImage(step4)
         break
       default:
-        console.log('step default');
         setMileStoneImage(step0)
     }
   }, [totalShareAll])

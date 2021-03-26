@@ -7,6 +7,6 @@ router.use('/presign-up', preSignUpRouter);
 
 router.use('/sign-up', signUpRouter);
 
-router.use('/shared-count', sharedCountRouter);
+router.use('/share-count', sharedCountRouter);
 
 module.exports = router;

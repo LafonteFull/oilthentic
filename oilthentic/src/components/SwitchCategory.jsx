@@ -3,14 +3,11 @@ import React, { useState } from "react";
 // import { useDispatch } from 'react-redux';
 // import { signUp } from '../store/actions/authAction';
 import { bgWeb4 } from '../assets/index'
-import { Link, useLocation } from "react-router-dom";
 import { KnowLeader, NoLeader } from ".";
-import { Route, Switch } from "react-router-dom";
 
 
 
 const SwitchCategory = () => {
-  const { pathname } = useLocation()
   // const dispatch = useDispatch()
   // const [userInput, setUserInput] = useState()
   const [category, setCategory] = useState(false);
@@ -44,8 +41,6 @@ const SwitchCategory = () => {
             </div>
             {!category && <NoLeader />}
             {category && <KnowLeader />}
-              {/* <Route exact path="/thank-you" component={NoLeader} />
-              <Route exact path="/thank-you/know-leader" component={KnowLeader} /> */}
         </div>
       </div>
     </div>
