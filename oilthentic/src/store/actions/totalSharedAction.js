@@ -22,6 +22,7 @@ export const getTotalCount = () => {
 } 
 
 export const incrementSum = (socialMedia, shareCount) => {
+  console.log(socialMedia, shareCount, '<<< incrementsum action')
   return async (dispatch, getState) => {
     try {
       const { data } = await axios({

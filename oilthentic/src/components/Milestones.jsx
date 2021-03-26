@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getTotalCount } from '../store/actions/totalSharedAction'
+import { getTotalCount, incrementSum } from '../store/actions/totalSharedAction'
+import { FacebookShareCount } from "react-share";
 // import Fade from 'react-reveal/Fade';
 import { shareFB, shareWA, shareTW, step0, step1, step2, step3, step4, bgWeb7 } from '../assets/index'
-import { FacebookShareButton, WhatsappShareButton } from "react-share";
+import { FacebookShareButton, WhatsappShareButton, TwitterShareButton } from "react-share";
 
 const Milestones = (props) => {
   const dispatch = useDispatch()
   const { totalShareAll } = useSelector(state => state.totalShared)
-  console.log(totalShareAll, 'halo manda')
 
   const [milestoneImage, setMileStoneImage] = useState(step0)
 
@@ -31,6 +31,15 @@ const Milestones = (props) => {
       setMileStoneImage(step0)
     }
   }, [totalShareAll])
+  
+  const increment = (e, socialMedia) => {
+    // get user ID
+      // user ID pernah share twitter?
+      // user ID pernah share facebook?
+      // user ID pernah share whatsapp?
+    e.preventDefault()
+    dispatch(incrementSum(socialMedia))
+  }
 
   return (
     <div id="pre-signup" className="merry-font bghalf"
@@ -46,9 +55,33 @@ const Milestones = (props) => {
               <div className="purple-text flex flex-col text-center text-sm py-10 flex flex-col items-center rounded-xl md:text-base md:font-bold">
                 <p className="-mt-5 mb-3">Orang sudah bergabung</p>
                 <div className="flex flex-row justify-center px-2 ">
-                  <img src={shareFB} alt="Share Facebook" className="h-8 md:h-10 cursor-pointer"/>
-                  <img src={shareWA} alt="Share WhatsApp" className="h-8 md:h-10 cursor-pointer"/>
-                  <img src={shareTW} alt="Share Twitter" className="h-8 md:h-10 cursor-pointer twitter-share-button outline-none focus:outline-none"/>
+                  {/* <img  src={shareFB} onClick={(e) => increment(e, 'Facebook')} alt="Share Facebook" className="h-8 md:h-10 cursor-pointer" />
+                  <img src={shareWA} onClick={(e) =>increment(e, 'WhatsApp')} alt="Share WhatsApp" className="h-8 md:h-10 cursor-pointer"/>
+                  <img src={shareTW} onClick={(e) =>increment(e, 'Twitter')} alt="Share Twitter" className="h-8 md:h-10 cursor-pointer twitter-share-button outline-none focus:outline-none"/> */}
+                  {/* <FacebookShareCount url={`https://oilthentic-test.web.app`}>
+                  {shareCount => <span className="myShareCountWrapper bg-red-200 w-96">{shareCount}</span>}
+                  </FacebookShareCount> */}
+                   <FacebookShareButton 
+                        url={"https://oilthentic-test.web.app"}
+                        quote={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}
+                        hashtag="#oilthenticday2021">
+                        <img src={shareFB} alt="Share Facebook" onClick={(e) => increment(e, 'Facebook')}  className="h-10 cursor-pointer"/>
+                      </FacebookShareButton>
+                        {/* <a href="http://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fwww.myDomain.com%2Fpath%2F"><img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer"/></a> */}
+                      <WhatsappShareButton 
+                        url={"https://oilthentic-test.web.app"}
+                        title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
+                        <img src={shareWA} alt="Share WhatsApp" onClick={(e) => increment(e, 'WhatsApp')}  className="h-10 cursor-pointer"/>
+                      </WhatsappShareButton>
+                      <TwitterShareButton 
+                        url={"https://oilthentic-test.web.app"}
+                        hashtags="#oilthenticday2021"
+                        title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
+                        <img src={shareTW} alt="Share Twitter" onClick={(e) => increment(e, 'Twitter')} className="h-10 cursor-pointer"/>
+                      </TwitterShareButton>
+                      {/* <a class="twitter-share-button" onClick={(e) => increment(e, 'Twitter')} target="_blank"  href="https://twitter.com/intent/tweet?text=Jadilah%20bagian%20dari%20gerakan%20ini%20dan%20dapatkan%20promo%20Young%20Living%20https://oilthentic-test.web.app/">
+                        <img src={shareTW} alt="Share Twitter" className="h-16 cursor-pointer" />
+                      </a> */}
                 </div>
               </div>
             </div>
@@ -92,15 +125,21 @@ const Milestones = (props) => {
                         url={"https://oilthentic-test.web.app"}
                         quote={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}
                         hashtag="#oilthenticday2021">
-                        <img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer"/>
+                        <img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer" onClick={(e) => increment(e, 'Facebook')}/>
                       </FacebookShareButton>
                         {/* <a href="http://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fwww.myDomain.com%2Fpath%2F"><img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer"/></a> */}
                       <WhatsappShareButton 
-                        url={"https://oilthentic-test.web.app/"}
+                        url={"https://oilthentic-test.web.app"}
                         title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
-                        <img src={shareWA} alt="Share WhatsApp" className="h-16 cursor-pointer"/>
+                        <img src={shareWA} alt="Share WhatsApp" className="h-16 cursor-pointer" onClick={(e) => increment(e, 'WhatsApp')}/>
                       </WhatsappShareButton>
-                        <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=Jadilah%20bagian%20dari%20gerakan%20ini%20dan%20dapatkan%20promo%20Young%20Living%20https://oilthentic-test.web.app/"><img src={shareTW} alt="Share Twitter" className="h-16 cursor-pointer"/></a>
+                      <TwitterShareButton 
+                        url={"https://oilthentic-test.web.app"}
+                        hashtags="#oilthenticday2021"
+                        title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
+                        <img src={shareTW} alt="Share Twitter" className="h-16 cursor-pointer" onClick={(e) => increment(e, 'Twitter')}/>
+                      </TwitterShareButton>
+                        {/* <a class="twitter-share-button" onClick={(e) => increment(e, 'Twitter')} target="_blank" href="https://twitter.com/intent/tweet?text=Jadilah%20bagian%20dari%20gerakan%20ini%20dan%20dapatkan%20promo%20Young%20Living%20https://oilthentic-test.web.app/"><img src={shareTW} alt="Share Twitter" className="h-16 cursor-pointer"/></a> */}
                       </div>
                     </div>
                   </div>
@@ -128,54 +167,6 @@ const Milestones = (props) => {
           </div>
         </div>
       </div>
-      {/* <div className="h-full bg-center flex justify-center items-center" > */}
-    {/* <div className="w-screen merry-font h-screen flex flex-col"
-    style={{ backgroundColor: '#E8E3DD' }}> */}
-    {/* <div className="flex md:flex-row lg:flex-row flex-col">
-      <div className="px-5 flex flex-col items-center md:w-1/2 ">
-        <div className="flex flex-col lg:absolute milestone-placement justify-center items-center">
-          <h3 className="purple-text merry-font text-center text-xl md:text-3xl font-bold px-10 py-10">Pencapaian Menuju Lebih Banyak Hadiah</h3> */}
-          {/* MILESTONE NUMBER */}
-          {/* <div className="milestone-box w-64 md:w-80 flex justify-center flex-col rounded-3xl bg-white mt-10 h-36 relative">
-            <div className="absolute purple-bg rounded-full py-2 px-8 text-2xl text-full text-gray-100 relative merry-font
-            share-count top-2 flex flex-col items-center text-center mx-auto rounded-xl w-3/4 md:w-3/4">
-              <h1>123,000</h1>
-            </div>
-            <div className="purple-text flex flex-col text-center text-sm py-10 flex flex-col items-center rounded-xl md:text-base md:font-bold">
-              <p className="-mt-5 mb-3">Orang sudah bergabung</p>
-              <div className="flex flex-row justify-center px-2 ">
-                <img src={shareFB} alt="Share Facebook" className="h-8 md:h-10 cursor-pointer"/>
-                <img src={shareWA} alt="Share WhatsApp" className="h-8 md:h-10 cursor-pointer"/>
-                <img src={shareTW} alt="Share Twitter" className="h-8 md:h-10 cursor-pointer"/>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        {/* END OF MILESTONE NUMBER */}
-      {/* </div> */}
-      {/* <div className="min-w-screen h-full bg-center bg-cover flex lg:flex-row md:flex-row sm:flex-col justify-center"
-        style={{ backgroundImage: `url(${bgWeb7})` , backgroundSize: 'cover' }} > */}
-          {/* <img src={step2} className="" style={{ objectFit: 'cover' }}/>
-          <div className="flex flex-col relative md:bottom-80 px-5 md:w-1/2 md:self-end" >
-            <h2 className="purple-text text-lg merry-font text-center font-bold md:text-3xl">Syarat dan Ketentuan</h2>
-            <div className="flex flex-row flex-wrap poppins-font purple-text my-5"
-            style={{fontSize: '.5rem'}}>
-              <div className="flex flex-col w-1/2 syarat px-2 text-justify">
-                <ul className="list-disc md:text-base m-2">
-                  <li>Anda harus mengirim form yang tersedia terlebih dahulu sebelum dapat share gerakan ini. </li>
-                  <li>Jumlah total akan bertambah setiap kali orang share di social media. Satu orang hanya bisa terhitung satu kali dalam jumlah total share. </li>
-                </ul>
-              </div>
-              <div className="flex flex-col w-1/2 syarat px-2 text-justify">
-                <ul className="list-disc md:text-base m-2">
-                  <li>Anda tidak akan ditarik biaya apapun pada saat pengisian form.  </li>
-                  <li>Hadiah bisa didapatkan setiap pembelian PEP Young Living Indonesia di acara Oilthentic Day 2021 tanggal 25 & 26 April 2021. </li>
-                </ul>
-              </div>
-            </div>
-          </div> */}
-      {/* </div> */}
-      {/* </div> */}
     </div> 
   )
 }
