@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { bgWeb2, buttonInformasi, product1 } from '../assets/index'
+import { bgWeb2, buttonInformasi, product1, bgr10 } from '../assets/index'
 import { ModalInfoAcara } from '../components/index'
  
 const SecondSection = (props) => {
@@ -10,10 +10,10 @@ const SecondSection = (props) => {
   }
 
   return (
-    <div className="merry-font bghalf"
-    style={{ backgroundColor: '#E8E3DC', backgroundImage: `url(${bgWeb2})` }}>
+    <div className="merry-font w-screen h-full bgRepeat pb-5"
+    style={{ backgroundColor: '#E8E3DC', backgroundImage: `url(${bgr10})` }}>
       <div className="px-5 flex flex-col justify-center items-center w-full md:py-20">
-        <p className="poppins-font px-2 md:px-40 purple-text text-justify text-xs md:text-3xl md:font-semibold">Dengan cara share acara ini di social media Anda, maka Anda sudah berkontribusi untuk mendapatkan promo lebih banyak pada saat Oilthentic Day 2021. Ajak teman Anda untuk ikut gerakan ini untuk mendapatkan semua promo yang tersedia!</p>
+        <p className="poppins-font px-2 md:px-10 lg:px-20 purple-text text-justify text-xs md:text-3xl md:font-semibold">Dengan cara share acara ini di social media Anda, maka Anda sudah berkontribusi untuk mendapatkan promo lebih banyak pada saat Oilthentic Day 2021. Ajak teman Anda untuk ikut gerakan ini untuk mendapatkan semua promo yang tersedia!</p>
         <div className="px-10 flex items-center flex-col">
           <img src={product1} alt="Oilthentic Products" className=""
           style={{ minWidth: '40vw' }}/>
