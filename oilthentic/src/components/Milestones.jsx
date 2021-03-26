@@ -40,7 +40,7 @@ const Milestones = (props) => {
           <div className="milestone-box w-64 md:w-80 flex justify-center flex-col rounded-3xl bg-white mt-10 h-32 relative">
               <div className="absolute purple-bg rounded-full py-2 px-8 text-2xl text-full text-gray-100 relative merry-font
               share-count flex flex-col items-center text-center mx-auto rounded-xl w-3/4 md:w-3/4">
-                <h1>{totalShareAll.toLocaleString('id')}</h1>
+                <h1>{totalShareAll.toLocaleString()}</h1>
               </div>
               <div className="purple-text flex flex-col text-center text-sm py-10 flex flex-col items-center rounded-xl md:text-base md:font-bold">
                 <p className="-mt-5 mb-3">Orang sudah bergabung</p>
@@ -82,7 +82,7 @@ const Milestones = (props) => {
                 <div className="milestone-box w-100 flex justify-center flex-col rounded-3xl bg-white mt-10 h-64 relative">
                     <div className="absolute purple-bg rounded-full py-2 px-8 text-2xl text-full text-gray-100 relative merry-font
                     share-count flex flex-col items-center text-center mx-auto rounded-xl w-3/4 -top-5 ">
-                      <h1 className="text-4xl">{totalShareAll.toLocaleString('id')}</h1>
+                      <h1 className="text-4xl">{totalShareAll.toLocaleString()}</h1>
                     </div>
                     <div className="purple-text flex flex-col text-center text-sm py-10 flex flex-col items-center rounded-xl md:text-base md:font-bold">
                       <p className="-mt- mb-3 text-2xl">Orang sudah bergabung</p>

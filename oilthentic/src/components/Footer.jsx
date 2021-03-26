@@ -5,10 +5,10 @@ import { buttonBeliSekarang, igFooter, ytFooter, siteFooter } from '../assets/in
 const Footer = () => {
   return (
     <footer>
-      <div className="purple-g w-screen py-5 purple-bg flex flex-row justify-between px-10 md:px-20">
+      <div className="purple-g w-screen py-5 purple-text flex flex-row justify-between px-10 md:px-20">
         <div className="flex flex-col justify-center mr-2">
-          <h2 className="merry-font font-bold text-white text-sm md:text-xl">Beli PEP Young Living</h2>
-          <p className="poppins-font text-xs text-white md:text-base">Untuk Kamu yang Tidak Suka Menunggu</p>
+          <h2 className="merry-font font-bold text-sm md:text-xl">Beli PEP Young Living</h2>
+          <p className="poppins-font text-xs md:text-base">Untuk Kamu yang Tidak Suka Menunggu</p>
         </div>
         <div className="">
           <img src={buttonBeliSekarang} alt="Beli sekarang" className="w-36 md:w-60"/>

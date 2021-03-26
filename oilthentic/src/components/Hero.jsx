@@ -23,7 +23,7 @@ const Hero = (props) => {
           { props.page !== 'thankyou' && (
             <>
               <h2 className="purple-text leading-tight font-bold text-center text-base md:text-xl">Jadilah Bagian Dari Gerakan Ini <br/> Dan Dapatkan Promo Lebih Banyak!</h2>
-              <h3 className="mt-3 text-gray-900 text-center text-sm font-semibold text-base md:text-xl">{totalShareAll.toLocaleString('id')} Orang sudah menjadi bagian</h3>
+              <h3 className="mt-3 text-gray-900 text-center text-sm font-semibold text-base md:text-xl">{totalShareAll.toLocaleString()} Orang sudah menjadi bagian</h3>
               <a href="#pre-signup" className="focus:outline-none"><img src={buttonDaftar} alt="Daftar Sekarang" className="w-44 mt-2 md:w-64" /></a>
             </>
           )}

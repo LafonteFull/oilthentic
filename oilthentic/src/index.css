@@ -87,6 +87,10 @@ body {
   height: 100%;
 }
 
+.bgRepeat {
+  background-repeat: repeat;
+}
+
 .innerDiv {
   background-size: 100% 100%;
 }

@@ -23,8 +23,8 @@ const Home = () => {
     <div className="overflow-x-hidden merry-font relative">
       <ScrollUpButton />
       <Hero isMobile={isMobile}/>
-      <SecondSection isMobile={isMobile}/>
       <ThirdSection isMobile={isMobile} /> 
+      <SecondSection isMobile={isMobile}/>
       <PreSignUp isMobile={isMobile}/>
       <Milestones isMobile={isMobile}/>
       <PEP isMobile={isMobile}/>

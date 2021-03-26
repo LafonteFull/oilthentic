@@ -1,13 +1,10 @@
 import React from 'react'
-import { bgMobile9, bgWeb6, benefit1, benefit2, benefit3, benefit4, benefit5 } from '../assets/index'
+import { bgr20, benefit1, benefit2, benefit3, benefit4, benefit5 } from '../assets/index'
 
 const KeuntunganMember = (props) => {
   return (
-    <div id="KeuntunganMember-video" className="bghalf"
-    style={{backgroundColor: '#E8E3DD'
-    , backgroundImage: props.isMobile ? `url(${bgMobile9})` : `url(${bgWeb6})` 
-    }}>
-      <div className="h-full flex"   style={{backgroundColor: '#E8E3DD'}}>
+    <div id="KeuntunganMember-video" className="w-screen h-screen">
+      <div className="h-full flex w-full" style={{ backgroundImage: `url(${bgr20})`, backgroundColor: '#E8E3DC' }}>
         <div className=" flex text-white flex-col w-full items-center py-10 self-end md:self-center">
             <h3 className="purple-text merry-font text-center font-bold text-xl md:text-4xl mb-10">Keuntungan Menjadi Member <br /> Young Living Indonesia</h3>
             <div className="flex flex-col justify-center items-center md:flex-row md:flex-wrap md:w-3/4 md:mt-10 ">
