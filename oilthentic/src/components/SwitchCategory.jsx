@@ -26,8 +26,8 @@ const SwitchCategory = () => {
   //   dispatch(signUp({...userInput, location: null}))
   // }
 
-  const backgroundClass1 = !category ? 'purple-bg text-white' : 'bg-gray-200 text-gray-400'
-  const backgroundClass2 = !category ? 'bg-gray-200  text-gray-400' : 'purple-bg text-white'
+  const backgroundClass1 = !category ? 'purple-bg text-white' : 'bg-gray-200 text-gray-500'
+  const backgroundClass2 = !category ? 'bg-gray-200  text-gray-500' : 'purple-bg text-white'
 
   return (
     <>
@@ -35,11 +35,11 @@ const SwitchCategory = () => {
     style={{ backgroundColor: '#E8E3DD' }}>
       <div className="h-full bg-center flex justify-center items-center bghalf"
         style={{ backgroundImage: `url(${bgWeb4})` }} >
-          <div className="px-10 flex text-white flex-col w-full items-center mt-15 md:mt-0">
+          <div className="px-10 flex text-white flex-col w-full items-center mt-15 md:mt-0 focus:outline-none">
             <div className="flex justify-center mt-20 bg-gray-200 rounded-xl z-10 p-1">
-                <button className={backgroundClass1 + " rounded-lg mr-1 font-bold md:w-40 w-32 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
+                <button className={backgroundClass1 + "focus:outline-none rounded-lg mr-1 font-bold md:w-40 w-32 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
                 onClick={() => setCategory(false)}>No Leader</button>
-                <button className={backgroundClass2 + " rounded-lg font-bold md:w-40 w-32 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
+                <button className={backgroundClass2 + "focus:outline-none rounded-lg font-bold md:w-40 w-32 text-sm text-center px-4 py-4 transition duration-300 ease-in-out hover:text-gray-700"}
                 onClick={() => setCategory(true)}>Know Leader</button>
             </div>
             {!category && <NoLeader />}
