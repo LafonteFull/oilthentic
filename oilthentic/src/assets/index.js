@@ -32,9 +32,10 @@ export { default as bgWeb1 } from './Background/BG-02.png'
 export { default as bgWeb2 } from './Background/BG-03.png'
 export { default as bgWeb3 } from './Background/BG-04.png'
 export { default as bgWeb4 } from './Background/BG-05.png'
-export { default as bgWeb5 } from './Background/BG-10.png'
+export { default as bgWeb5 } from './Background/BG-8.png'
 export { default as bgWeb6 } from './Background/BG-12.png'
 export { default as bgWeb7 } from './Background/BG-6&7.png'
+export { default as bgr20 } from './Background/BGR-20.png'
 
 // Title header (hero)
 export { default as mobileTitle } from './Title/homepage-title.png'
