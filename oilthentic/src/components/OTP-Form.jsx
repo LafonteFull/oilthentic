@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { checkOTP } from "../store/actions/authAction";
 
 const OTPForm = (props) => {
+  const dispatch = useDispatch();
   const [OTP, setOTP] = useState({})
 
   const onChange = (e) => {
@@ -16,8 +19,16 @@ const OTPForm = (props) => {
     for (const key in OTP) {
       temp+= OTP[key]
     }
-    console.log(temp);
-    if (temp.length === 6) props.addMember(e)
+    console.log(temp, 'temp');
+    console.log(props.userInput, 'temp');
+    if (temp.length === 6) {
+      props.addMember(e)
+      const payload = {
+        user: props.userInput,
+        otp: temp
+      }
+      dispatch(checkOTP(payload))
+    }
   }
 
   return (

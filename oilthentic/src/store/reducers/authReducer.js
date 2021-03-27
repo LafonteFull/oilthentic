@@ -3,8 +3,9 @@ const initialState = {
 }
 
 const authReducer = ( state = initialState, action ) => {
+  console.log(action);
   switch (action.type) {
-    case 'CHANGE_USER':
+    case "CHANGE_USER":
       return {
         ...state,
         user: action.payload
