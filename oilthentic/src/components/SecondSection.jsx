@@ -17,8 +17,8 @@ const SecondSection = (props) => {
         <div className="px-10 flex items-center flex-col">
           <img src={product1} alt="Oilthentic Products" className=""
           style={{ minWidth: '40vw' }}/>
-          <a href="#pep-video" className="merry-font purple-text underline font-bold cursor-pointer text-base md:text-3xl">Lihat Informasi Tentang PEP</a>
-          <img src={buttonInformasi} alt="Informasi Acara" className="w-44 mt-4 md:w-72" onClick={() => setShowModal(true)}/>
+          <a href="#pep-video" className="merry-font purple-text underline font-bold cursor-pointer text-base md:text-3xl xl:text-4xl">Lihat Informasi Tentang PEP</a>
+          <img src={buttonInformasi} alt="Informasi Acara" className="w-44 mt-4 md:w-72 lg:w-80" onClick={() => setShowModal(true)}/>
         </div>
          {/* MODAL */}
          { showModal && <ModalInfoAcara closeModal={closeModal} /> }
