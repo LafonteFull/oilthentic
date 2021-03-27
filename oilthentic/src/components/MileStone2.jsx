@@ -4,7 +4,7 @@ import { bgMobile5, webMilestone4,
 
 const MileStone2 = (props) => {
   return (
-    <div className="w-screen merry-font h-screen overflow-visible"
+    <div className="w-full merry-font h-screen overflow-visible"
     style={{ backgroundColor: '#E8E3DD' }}>
       <div className="min-w-screen h-full bg-center bg-cover flex justify-center "
         style={{ backgroundImage: props.isMobile ? `url(${bgMobile5})` : `url(${webMilestone4})`, backgroundSize: 'cover' }} >
