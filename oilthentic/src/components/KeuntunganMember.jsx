@@ -3,7 +3,7 @@ import { bgr20, benefit1, benefit2, benefit3, benefit4, benefit5 } from '../asse
 
 const KeuntunganMember = (props) => {
   return (
-    <div id="KeuntunganMember-video" className="w-screen h-full bgRepeat">
+    <div id="KeuntunganMember-video" className="w-full h-full bgRepeat">
       <div className="h-full flex w-full" style={{ backgroundImage: `url(${bgr20})`, backgroundColor: '#E8E3DC' }}>
         <div className=" flex text-white flex-col w-full items-center py-10 self-end md:self-center">
             <h3 className="purple-text merry-font text-center font-bold text-xl md:text-2xl mb-10 lg:text-4xl md:mt-10">Keuntungan Menjadi Member <br /> Young Living Indonesia</h3>

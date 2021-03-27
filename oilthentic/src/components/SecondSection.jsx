@@ -10,7 +10,7 @@ const SecondSection = (props) => {
   }
 
   return (
-    <div className="merry-font w-screen h-full bgRepeat pb-5"
+    <div className="merry-font w-full h-full bgRepeat pb-5"
     style={{ backgroundColor: '#E8E3DC', backgroundImage: `url(${bgr10})` }}>
       <div className="px-5 flex flex-col justify-center items-center w-full md:py-20">
         <p className="poppins-font px-2 md:px-10 lg:px-20 purple-text text-justify text-xs md:text-3xl md:font-semibold">Dengan cara share acara ini di social media Anda, maka Anda sudah berkontribusi untuk mendapatkan promo lebih banyak pada saat Oilthentic Day 2021. Ajak teman Anda untuk ikut gerakan ini untuk mendapatkan semua promo yang tersedia!</p>
