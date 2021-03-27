@@ -1,16 +1,17 @@
-import React, { useState } from "react";
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 import { buttonKirim } from '../assets/index'
-import { signUp } from '../store/actions/authAction';
+import { checkOTP, requestOTP } from '../store/actions/authAction';
 import { OTPForm } from '../components/index'
 
 
 const NoLeader = () => {
   const dispatch = useDispatch()
-  const [userInput, setUserInput] = useState({location: 'jakarta'})
+  const [userInput, setUserInput] = useState({location: 'jakarta', memberId: ''})
   const [showModal, setShowModal] = useState(false)
   const [showOTP, setShowOTP] = useState(false)
   const [otpVerified, setOTPVerified] = useState(false)
+  const { user } = useSelector(state => state.user)
 
   const onChange = (e) => {
     let { name, value } = e.target;
@@ -18,20 +19,26 @@ const NoLeader = () => {
     setUserInput(newInput);
   };
 
+  useEffect(() => {
+    console.log(user, 'test');
+  }, [user])
+
   const onSubmit = (e) => {
     e.preventDefault()
     setShowModal(true)
   }
-
+  
   const addMember = (e) => {
     e.preventDefault()
     setShowOTP(false)
-    dispatch(signUp({...userInput, memberId: null}))
+    // dispatch(signUp({...userInput, memberId: null}))
     setOTPVerified(true)
   }
-
+  
   const getOTP = (e) => {
     e.preventDefault()
+    // console.log('get otp invoked');
+    dispatch(requestOTP())
     setShowOTP(true)
     setShowModal(false)
   }
@@ -126,7 +133,7 @@ const NoLeader = () => {
                 <div className="relative w-auto my-6 mx-auto max-w-3xl px-5">
                   {/*content*/}
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                    <OTPForm confirmOTP={confirmOTP} addMember={addMember} />
+                    <OTPForm confirmOTP={confirmOTP} addMember={addMember} userInput={userInput} />
                     {/*footer*/}
                     <div className="flex items-center justify-end p-2 border-t border-solid border-blueGray-200 rounded-b">
                       <button

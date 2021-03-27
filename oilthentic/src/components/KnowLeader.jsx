@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { signUp } from '../store/actions/authAction';
+// import { signUp } from '../store/actions/authAction';
 import { buttonKirim } from '../assets/index'
 import { OTPForm } from ".";
 
@@ -25,7 +25,7 @@ const KnowLeader = () => {
   const addMember = (e) => {
     e.preventDefault()
     setShowOTP(false)
-    dispatch(signUp({...userInput, memberId: null}))
+    // dispatch(signUp({...userInput, memberId: null}))
     setOTPVerified(true)
   }
 
