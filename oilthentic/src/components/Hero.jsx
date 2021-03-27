@@ -18,8 +18,9 @@ const Hero = (props) => {
         style={{ backgroundImage: props.isMobile ? `url(${bgMobile1})` : `url(${bgWeb1})`,
         backgroundColor: '#E8E3DD', maxWidth: '100vw'}} >
         <div className="px-5 flex flex-col justify-center items-center h-full w-full mt-10 ">
-          <img src={props.page === 'thankyou' ? mobileTitleThankYou : mobileTitle} alt="Road to Oilthentic Day 2021" className="landingtitle -mt-40 mb-10 w-3/4 lg:w-5/12 xl:w-1/3 xl:mt-5 xl:-mt-5"
-            />
+        <img src={props.page === 'thankyou' ? mobileTitleThankYou : mobileTitle} alt="Road to Oilthentic Day 2021" className="landingtitle -mt-40 mb-10 w-3/4 lg:w-5/12 xl:w-1/3 xl:mt-5 xl:-mt-5 md:-mt-10"
+          // style={{ width: props.isMobile ? '20rem' : '40rem' }} 
+          />
           { props.page !== 'thankyou' && (
             <>
               <h2 className="purple-text leading-tight font-bold text-center text-base md:text-2xl md:px-20">Jadilah Bagian Dari Gerakan Ini Dan Dapatkan Promo Lebih Banyak!</h2>
