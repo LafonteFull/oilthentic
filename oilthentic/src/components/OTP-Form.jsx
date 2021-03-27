@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { checkOTP } from "../store/actions/authAction";
+import { checkOTP, requestOTP } from "../store/actions/authAction";
 
 const OTPForm = (props) => {
   const dispatch = useDispatch();
@@ -29,6 +29,20 @@ const OTPForm = (props) => {
       }
       dispatch(checkOTP(payload))
     }
+  }
+
+  const onClick = (e) => {
+    e.preventDefault()
+    console.log('request send otp code again');
+    // let temp = ''
+    // for (const key in OTP) {
+    //   temp+= OTP[key]
+    // }
+    // console.log(temp, 'temp');
+    // console.log(props.userInput, 'temp');
+    // if (temp.length === 6) {
+    //   props.addMember(e)
+      dispatch(requestOTP())
   }
 
   return (
@@ -86,6 +100,7 @@ const OTPForm = (props) => {
             </div>
             <div className="pt-4 flex items-center space-x-4">
               <button
+              onClick={onClick}
                 type="submit"
                 className="inline flex justify-center text-sm items-center w-full text-gray-400 px-4 py-3 hover:text-gray-700"
               >

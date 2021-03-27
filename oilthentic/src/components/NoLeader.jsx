@@ -4,24 +4,18 @@ import { buttonKirim } from '../assets/index'
 import { checkOTP, requestOTP } from '../store/actions/authAction';
 import { OTPForm } from '../components/index'
 
-
 const NoLeader = () => {
   const dispatch = useDispatch()
   const [userInput, setUserInput] = useState({location: 'jakarta', memberId: ''})
   const [showModal, setShowModal] = useState(false)
   const [showOTP, setShowOTP] = useState(false)
   const [otpVerified, setOTPVerified] = useState(false)
-  const { user } = useSelector(state => state.user)
 
   const onChange = (e) => {
     let { name, value } = e.target;
     const newInput = { ...userInput, [name]: value };
     setUserInput(newInput);
   };
-
-  useEffect(() => {
-    console.log(user, 'test');
-  }, [user])
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -37,7 +31,6 @@ const NoLeader = () => {
   
   const getOTP = (e) => {
     e.preventDefault()
-    // console.log('get otp invoked');
     dispatch(requestOTP())
     setShowOTP(true)
     setShowModal(false)
