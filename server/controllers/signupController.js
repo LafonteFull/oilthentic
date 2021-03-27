@@ -20,7 +20,7 @@ class Controller {
         .create({to: userData.phone, channel: 'sms'})
         .then(verification => {
           console.log(verification.status)
-          res.status(201).json({ message: verification.status})
+          res.status(201).json({ message: verification.status, userId: decodedToken.id})
           })
       } else {
         throw { name: 'resourceNotFound'}
