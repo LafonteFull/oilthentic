@@ -56,13 +56,13 @@ const NoLeader = () => {
   }
 
   return (
-    <div className='md:w-1/3 lg:w-1/3 w-fulljustify-center mt-5'>
+    <div className='md:w-2/3 merry-font w-full justify-center mt-5 text-white'>
         <form
         onSubmit={onSubmit}
         className="flex justify-center items-center">
           <div className="px-5">
             <div className="flex-1 flex-col md:mt-10">
-              <label className="text-xs md:text-lg">Location</label>
+              <label className="text-xs md:text-lg lg:text-xl">Location</label>
               <select
               required
               name='location'
