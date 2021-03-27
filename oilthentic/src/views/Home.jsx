@@ -20,7 +20,7 @@ const Home = () => {
   }, [isMobile])
 
   return (
-    <div className="overflow-x-hidden merry-font relative">
+    <div className="overflow-x-hidden merry-font w-screen">
       <ScrollUpButton />
       <Hero isMobile={isMobile}/>
       <ThirdSection isMobile={isMobile} /> 
