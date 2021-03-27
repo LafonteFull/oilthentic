@@ -49,13 +49,13 @@ const KnowLeader = () => {
   }
 
   return (
-    <div className='md:w-1/3 lg:w-1/3 w-full justify-center mt-5'>
+    <div className='md:w-2/3 merry-font w-full justify-center mt-5 text-white'>
         <form
         onSubmit={onSubmit}
         className="flex justify-center items-center">
           <div className="px-5">
             <div className="flex-1 flex-col md:mt-10">
-              <label className="text-xs md:text-lg">Young Living ID</label>
+              <label className="text-xs md:text-lg lg:text-xl">Young Living ID</label>
               <div className="flex flex-row items-center">
                 <input
                   name="memberId"

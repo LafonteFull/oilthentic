@@ -51,7 +51,7 @@ const OTPForm = (props) => {
       className="flex justify-center flex-row px-10">
           <div className="py-8 text-base text-gray-900">
             <div className="">
-              <h2 className="text-xl text-center md:text-4xl lg:text-4xl font-bold">Verifikasi nomor handphone Anda</h2>
+              <h2 className="text-xl text-center md:text-3xl font-bold">Verifikasi nomor handphone Anda</h2>
               <h2 className="text-sm italic text-center m-2 text-gray-700">Masukkan kode OTP terkirim.</h2>
             </div>
             <div className="grid grid-cols-6 gap-1 h-12 mt-5">

@@ -1,9 +1,11 @@
 import React from "react";
 import { SwitchCategory } from ".";
+import { bgWeb4 } from '../assets/index'
 
 const SignUp = () => {
   return (
-    <div className="text-gray-900 flex flex-col w-full h-full justify-center items-center">
+    <div className="text-gray-900 bgImage flex items-center justify-center"
+    style={{ backgroundImage: `url(${bgWeb4})`, backgroundColor: '#E8E3DC' }}>
       <SwitchCategory />
     </div>
   )

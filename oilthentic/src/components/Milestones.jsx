@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getTotalCount, incrementSum } from '../store/actions/totalSharedAction'
 import { FacebookShareCount } from "react-share";
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 // import Fade from 'react-reveal/Fade';
 import { shareFB, shareWA, shareTW, step0, step1, step2, step3, step4, bgWeb7 } from '../assets/index'
 import { FacebookShareButton, WhatsappShareButton, TwitterShareButton } from "react-share";
@@ -9,12 +10,20 @@ import { FacebookShareButton, WhatsappShareButton, TwitterShareButton } from "re
 const Milestones = (props) => {
   const dispatch = useDispatch()
   const { totalShareAll } = useSelector(state => state.totalShared)
-
+  const [filledForm, setFilledForm] = useState(false)
+  const access_token = localStorage.getItem('access_token')
+  const [twitter, setTwitter] = useState(false)
+  const [whatsApp, setWhatApp] = useState(false)
+  const [faceboook, setFaceboook] = useState(false)
   const [milestoneImage, setMileStoneImage] = useState(step0)
 
   useEffect(() => {
     dispatch(getTotalCount())
   }, [])
+
+  useEffect(() => {
+    if (access_token) setFilledForm(true)
+  }, [access_token])
 
   useEffect(() => {
     if (totalShareAll <  100000) {
@@ -33,12 +42,17 @@ const Milestones = (props) => {
   }, [totalShareAll])
   
   const increment = (e, socialMedia) => {
-    // get user ID
-      // user ID pernah share twitter?
-      // user ID pernah share facebook?
-      // user ID pernah share whatsapp?
     e.preventDefault()
-    dispatch(incrementSum(socialMedia))
+    if (socialMedia == 'Facebook' && !faceboook) {
+      dispatch(incrementSum(socialMedia))
+      setFaceboook(true)
+    } else if (socialMedia == 'WhatsApp' && !whatsApp) {
+      dispatch(incrementSum(socialMedia))
+      setWhatApp(true)
+    } else if (socialMedia == 'Twitter' && !twitter) {
+      dispatch(incrementSum(socialMedia))
+      setTwitter(true)
+    }
   }
 
   return (
@@ -46,28 +60,27 @@ const Milestones = (props) => {
     style={{ backgroundColor: '#E8E3DD',  backgroundImage: `url(${bgWeb7})` }}>
       <div className="w-full h-full flex flex-col xl:flex-row justify-center items-center py-5 md:py-10">
         <div className="block xl:hidden flex justify-center flex-col items-center ">
-          <h3 className="purple-text merry-font text-center text-lg font-bold px-10 mt-5 md:mb-10 md:text-4xl md:mt-10">Pencapaian Menuju Lebih Banyak Hadiah</h3>
+          <h3 className="purple-text merry-font text-center text-lg font-bold px-10 mt-5 md:mb-10 md:text-3xl md:mt-10">Pencapaian Menuju Lebih Banyak Hadiah</h3>
           <div className="milestone-box w-64 md:w-96 flex justify-center flex-col rounded-3xl bg-white mt-10 h-32 md:h-44 relative">
-              <div className="absolute purple-bg rounded-full py-2 px-8 text-2xl md:text-4xl text-full text-gray-100 relative merry-font
+              <div className="absolute purple-bg rounded-full py-2 px-8 text-2xl md:text-3xl text-full text-gray-100 relative merry-font
               share-count flex flex-col items-center text-center mx-auto rounded-xl w-3/4 md:w-3/4">
                 <h1>{totalShareAll.toLocaleString()}</h1>
               </div>
               <div className="purple-text flex flex-col text-center text-sm py-10 flex flex-col items-center rounded-xl md:text-2xl md:font-bold">
                 <p className="-mt-5 mb-3">Orang sudah bergabung</p>
                 <div className="flex flex-row justify-center px-2 ">
-                  {/* <img  src={shareFB} onClick={(e) => increment(e, 'Facebook')} alt="Share Facebook" className="h-8 md:h-10 cursor-pointer" />
-                  <img src={shareWA} onClick={(e) =>increment(e, 'WhatsApp')} alt="Share WhatsApp" className="h-8 md:h-10 cursor-pointer"/>
-                  <img src={shareTW} onClick={(e) =>increment(e, 'Twitter')} alt="Share Twitter" className="h-8 md:h-10 cursor-pointer twitter-share-button outline-none focus:outline-none"/> */}
-                  {/* <FacebookShareCount url={`https://oilthentic-test.web.app`}>
-                  {shareCount => <span className="myShareCountWrapper bg-red-200 w-96">{shareCount}</span>}
-                  </FacebookShareCount> */}
-                   <FacebookShareButton 
+                  { !filledForm && ( <>
+                    <a href="#pre-signup"><img src={shareFB} alt="Share Facebook" className="cursor-pointer w-full"/></a>
+                    <a href="#pre-signup"><img src={shareWA} alt="Share WhatsApp" className="cursor-pointer w-full"/></a>
+                    <a href="#pre-signup"><img src={shareTW} alt="Share Twitter" className="cursor-pointer w-full"/></a>
+                    </> )
+                  }
+                  { filledForm && ( <><FacebookShareButton 
                     url={"https://oilthentic-test.web.app"}
                     quote={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}
                     hashtag="#oilthenticday2021">
                     <img src={shareFB} alt="Share Facebook" onClick={(e) => increment(e, 'Facebook')}  className="cursor-pointer w-full"/>
                   </FacebookShareButton>
-                    {/* <a href="http://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fwww.myDomain.com%2Fpath%2F"><img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer"/></a> */}
                   <WhatsappShareButton 
                     url={"https://oilthentic-test.web.app"}
                     title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
@@ -78,14 +91,15 @@ const Milestones = (props) => {
                     hashtag="#oilthenticday2021"
                     title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
                     <img src={shareTW} alt="Share Twitter" onClick={(e) => increment(e, 'Twitter')} className="cursor-pointer w-full"/>
-                  </TwitterShareButton>
-                      {/* <a class="twitter-share-button" onClick={(e) => increment(e, 'Twitter')} target="_blank"  href="https://twitter.com/intent/tweet?text=Jadilah%20bagian%20dari%20gerakan%20ini%20dan%20dapatkan%20promo%20Young%20Living%20https://oilthentic-test.web.app/">
-                        <img src={shareTW} alt="Share Twitter" className="h-16 cursor-pointer" />
-                      </a> */}
+                  </TwitterShareButton></> )
+                  }
                 </div>
               </div>
             </div>
-            <img src={milestoneImage} alt="Milestone progress" className="my-2 px-5" style={{width: 'auto' }}/>
+            <LazyLoadImage
+              effect="opacity"
+              src={milestoneImage} alt="Milestone progress" className="my-2 px-5" style={{width: 'auto' }} />
+            {/* <img src={milestoneImage} alt="Milestone progress" className="my-2 px-5" style={{width: 'auto' }}/> */}
             <div className="flex justify-center flex-col items-center mt-4 px-3 w-full">
                 <h2 className="purple-text merry-font text-center font-bold text-base md:text-2xl">Syarat dan Ketentuan</h2>
                   <div className="flex flex-row flex-wrap poppins-font purple-text my-5">
@@ -108,7 +122,9 @@ const Milestones = (props) => {
         <div className="w-full py-5 hidden xl:block">
           <div className="flex flex-row w-full">
             <div className=" py-10 px-20">
-              <img src={milestoneImage} className="" alt="Milestone progress" style={{minHeight: 'auto', maxWidth: '40vw' }}/>
+            <LazyLoadImage
+              effect="opacity"
+              src={milestoneImage} className="" alt="Milestone progress" style={{minHeight: 'auto', maxWidth: '40vw' }}/>
             </div>
             <div className="w-1/2 flex justify-center flex-col items-center">
               <div className="flex justify-center flex-col items-center w-full">
@@ -116,41 +132,46 @@ const Milestones = (props) => {
                 <div className="milestone-box w-100 flex justify-center flex-col rounded-3xl bg-white mt-10 h-64 relative">
                     <div className="absolute purple-bg rounded-full py-2 px-8 text-2xl text-full text-gray-100 relative merry-font
                     share-count flex flex-col items-center text-center mx-auto rounded-xl w-3/4 -top-5 ">
-                      <h1 className="text-4xl lg:text-6xl">{totalShareAll.toLocaleString()}</h1>
+                      <h1 className="text-3xl lg:text-6xl">{totalShareAll.toLocaleString()}</h1>
                     </div>
                     <div className="purple-text flex flex-col text-center text-sm py-10 flex flex-col items-center rounded-xl md:text-base md:font-bold">
                       <p className="-mt- mb-3 text-2xl lg:text-3xl">Orang sudah bergabung</p>
                       <div className="flex flex-row justify-center px-2 mt-5">
-                      <FacebookShareButton 
-                        url={"https://oilthentic-test.web.app"}
-                        quote={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}
-                        hashtag="#oilthenticday2021">
-                        <img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer" onClick={(e) => increment(e, 'Facebook')}/>
-                      </FacebookShareButton>
-                        {/* <a href="http://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fwww.myDomain.com%2Fpath%2F"><img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer"/></a> */}
-                      <WhatsappShareButton 
-                        url={"https://oilthentic-test.web.app"}
-                        title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
-                        <img src={shareWA} alt="Share WhatsApp" className="h-16 cursor-pointer" onClick={(e) => increment(e, 'WhatsApp')}/>
-                      </WhatsappShareButton>
-                      <TwitterShareButton 
-                        url={"https://oilthentic-test.web.app"}
-                        hashtag="#oilthenticday2021"
-                        title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
-                        <img src={shareTW} alt="Share Twitter" className="h-16 cursor-pointer" onClick={(e) => increment(e, 'Twitter')} />
-                      </TwitterShareButton>
-                        {/* <a class="twitter-share-button" onClick={(e) => increment(e, 'Twitter')} target="_blank" href="https://twitter.com/intent/tweet?text=Jadilah%20bagian%20dari%20gerakan%20ini%20dan%20dapatkan%20promo%20Young%20Living%20https://oilthentic-test.web.app/">
-                          <img src={shareTW} alt="Share Twitter" className="h-16 cursor-pointer"/>
-                        </a> */}
+                      { !filledForm && ( <>
+                        <a href="#pre-signup"><img src={shareFB} alt="Share Facebook" className="cursor-pointer h-16"/></a>
+                        <a href="#pre-signup"><img src={shareWA} alt="Share WhatsApp" className="cursor-pointer h-16"/></a>
+                        <a href="#pre-signup"><img src={shareTW} alt="Share Twitter" className="cursor-pointer h-16"/></a>
+                        </> )
+                      }
+                      { filledForm && <> 
+                        <FacebookShareButton 
+                          url={"https://oilthentic-test.web.app"}
+                          quote={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}
+                          hashtag="#oilthenticday2021">
+                          <img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer" onClick={(e) => increment(e, 'Facebook')}/>
+                        </FacebookShareButton>
+                          {/* <a href="http://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fwww.myDomain.com%2Fpath%2F"><img src={shareFB} alt="Share Facebook" className="h-16 cursor-pointer"/></a> */}
+                        <WhatsappShareButton 
+                          url={"https://oilthentic-test.web.app"}
+                          title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
+                          <img src={shareWA} alt="Share WhatsApp" className="h-16 cursor-pointer" onClick={(e) => increment(e, 'WhatsApp')}/>
+                        </WhatsappShareButton>
+                        <TwitterShareButton 
+                          url={"https://oilthentic-test.web.app"}
+                          hashtag="#oilthenticday2021"
+                          title={"Jadilah bagian dari gerakan ini dan dapatkan promo Young Living"}>
+                          <img src={shareTW} alt="Share Twitter" className="h-16 cursor-pointer" onClick={(e) => increment(e, 'Twitter')} />
+                        </TwitterShareButton>
+                        </> }
                       </div>
                     </div>
                   </div>
               </div>
               {/* DIVIDER */}
               <div className="flex justify-center my-10 flex-col items-center mt-40 px-20 w-full">
-                <h2 className="purple-text text-lg merry-font text-center font-bold text-xl lg:text-2xl ">Syarat dan Ketentuan</h2>
-                  <div className="flex flex-row flex-wrap poppins-font purple-text my-5 text-base m-2 lg:text-xl">
-                    <div className="flex flex-col syarat px-2 text-justify ">
+                <h2 className="purple-text text-lg merry-font text-center font-bold text-sm md:text-xl">Syarat dan Ketentuan</h2>
+                  <div className="flex flex-row flex-wrap poppins-font purple-text my-5 text-sm m-2 lg:text-base">
+                    <div className="flex flex-col syarat px-2 text-justify">
                       <ul className="list-disc mx-2">
                         <li>Anda harus mengirim form yang tersedia terlebih dahulu sebelum dapat share gerakan ini. </li>
                         <li>Jumlah total akan bertambah setiap kali orang share di social media. Satu orang hanya bisa terhitung satu kali dalam jumlah total share. </li>
