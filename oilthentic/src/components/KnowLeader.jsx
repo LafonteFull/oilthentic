@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
-// import { signUp } from '../store/actions/authAction';
 import { buttonKirim } from '../assets/index'
 import { OTPForm } from ".";
+import { requestOTP } from "../store/actions/authAction";
 
 const KnowLeader = () => {
   const dispatch = useDispatch()
@@ -31,6 +31,7 @@ const KnowLeader = () => {
 
   const getOTP = (e) => {
     e.preventDefault()
+    dispatch(requestOTP())
     setShowOTP(true)
     setShowModal(false)
   }
@@ -57,7 +58,7 @@ const KnowLeader = () => {
               <label className="text-xs md:text-lg lg:text-xl">Young Living ID</label>
               <div className="flex flex-row items-center">
                 <input
-                  name="YL_id"
+                  name="memberId"
                   type="text"
                   className="rounded-none inline-block text-sm md:text-lg w-full py-2 px-1 mt-1 appearance-none 
                   pl-2 text-gray-800
@@ -124,7 +125,7 @@ const KnowLeader = () => {
                 <div className="relative w-auto my-6 mx-auto max-w-3xl px-5">
                   {/*content*/}
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                    <OTPForm confirmOTP={confirmOTP} addMember={addMember} />
+                    <OTPForm confirmOTP={confirmOTP} addMember={addMember} userInput={userInput} />
                     {/*footer*/}
                     <div className="flex items-center justify-end p-2 border-t border-solid border-blueGray-200 rounded-b">
                       <button
