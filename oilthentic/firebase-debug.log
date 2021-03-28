@@ -1,27 +1,27 @@
-[debug] [2021-03-28T09:56:05.529Z] ----------------------------------------------------------------------
-[debug] [2021-03-28T09:56:05.530Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
-[debug] [2021-03-28T09:56:05.530Z] CLI Version:   9.6.1
-[debug] [2021-03-28T09:56:05.530Z] Platform:      darwin
-[debug] [2021-03-28T09:56:05.531Z] Node Version:  v14.16.0
-[debug] [2021-03-28T09:56:05.532Z] Time:          Sun Mar 28 2021 16:56:05 GMT+0700 (Western Indonesia Time)
-[debug] [2021-03-28T09:56:05.532Z] ----------------------------------------------------------------------
-[debug] [2021-03-28T09:56:05.532Z] 
-[debug] [2021-03-28T09:56:05.537Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2021-03-28T09:56:05.538Z] > authorizing via signed-in user
-[debug] [2021-03-28T09:56:05.538Z] [iam] checking project oilthentic-test for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2021-03-28T09:56:05.539Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2021-03-28T09:56:05.539Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2021-03-28T09:58:06.176Z] ----------------------------------------------------------------------
+[debug] [2021-03-28T09:58:06.177Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-03-28T09:58:06.177Z] CLI Version:   9.6.1
+[debug] [2021-03-28T09:58:06.177Z] Platform:      darwin
+[debug] [2021-03-28T09:58:06.177Z] Node Version:  v14.16.0
+[debug] [2021-03-28T09:58:06.179Z] Time:          Sun Mar 28 2021 16:58:06 GMT+0700 (Western Indonesia Time)
+[debug] [2021-03-28T09:58:06.179Z] ----------------------------------------------------------------------
+[debug] [2021-03-28T09:58:06.179Z] 
+[debug] [2021-03-28T09:58:06.184Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-28T09:58:06.184Z] > authorizing via signed-in user
+[debug] [2021-03-28T09:58:06.185Z] [iam] checking project oilthentic-test for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-28T09:58:06.186Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-28T09:58:06.186Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[debug] [2021-03-28T09:56:05.564Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+[debug] [2021-03-28T09:58:06.208Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
 
 For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2021-03-28T09:56:05.565Z] > refreshing access token with scopes: []
-[debug] [2021-03-28T09:56:05.566Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2021-03-28T09:58:06.209Z] > refreshing access token with scopes: []
+[debug] [2021-03-28T09:58:06.209Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[debug] [2021-03-28T09:56:05.569Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+[debug] [2021-03-28T09:58:06.216Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
 
 For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2021-03-28T09:56:05.573Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+[debug] [2021-03-28T09:58:06.221Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
 
 For CI servers and headless environments, generate a new token with firebase login:ci
     at invalidCredentialError (/usr/local/lib/node_modules/firebase-tools/lib/auth.js:26:12)
