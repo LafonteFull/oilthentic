@@ -43,6 +43,6 @@ services:
     networks:
       - overlay
     volumes:
-      - /var/lib/postgresql/data:/var/lib/postgresql/data
+      - /home/ubuntu/postgresql/data:/var/lib/postgresql/data
 networks:
   overlay:
