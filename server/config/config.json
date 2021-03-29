@@ -1,23 +1,23 @@
 {
   "development": {
     "username": "visquare",
-    "password": "visquare",
+    "password": "visquare123",
     "database": "oilthentic",
-    "host": "127.0.0.1",
+    "host": "postgres",
     "dialect": "postgres"
   },
   "test": {
-    "username": "root",
-    "password": null,
+    "username": "visquare",
+    "password": "visquare123",
     "database": "database_test",
-    "host": "127.0.0.1",
+    "host": "postgres",
     "dialect": "postgres"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "visquare",
+    "password": "visquare123",
+    "database": "oilthentic_production",
+    "host": "postgres",
     "dialect": "postgres"
   }
 }
